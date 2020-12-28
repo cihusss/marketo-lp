@@ -35,6 +35,10 @@ a img { border: 0; outline: none; }
     flex-direction: column;
 }
 
+.col-retain {
+    align-items: center;
+}
+
 .row-flex {
     display: flex;
     flex-direction: row;
@@ -66,6 +70,7 @@ a img { border: 0; outline: none; }
 .padding-type-right-small { padding-right: 32px; }
 .padding-type-left-small { padding-left: 32px; }
 .padding-type-top-small { padding-top: 32px; }
+.padding-type-bottom-small { padding-bottom: 32px; }
 .padding-hero-large { padding: 128px; }
 .padding-hero-medium { padding: 64px 128px; }
 .padding-hero-small { padding: 32px 64px; }

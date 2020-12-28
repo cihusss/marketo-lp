@@ -54,6 +54,11 @@ a:hover {
     color: rgba(255,255,255,0.2);
 }
 
+.qq-override {
+    color: #d2d2d2;
+    margin: -154px 0 0 -12px;
+}
+
 /* ---------- colors ---------- */
 
 .bg-light-gray { background: #d8d8d8; }
@@ -118,11 +123,19 @@ a:hover {
     color: white;
     display: inline-block;
     transition: background .3s ease-out;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    white-space: nowrap;
 }
 
 .button:hover {
     background: #1B1B1B;
     color: white;
+}
+
+.button-wide {
+    padding: 16px 120px;
 }
 
 .whiteline {
@@ -133,6 +146,10 @@ a:hover {
 .grayline {
     height: 1px;
     background: #d8d8d8;
+}
+
+.whitebreak {
+    height: 120px;
 }
 
 .card, .card-bare {
@@ -170,7 +187,7 @@ a:hover {
 }
 
 .quote {
-    padding: 128px 392px;
+    padding: 116px 392px;
 }
 
 .quote h5 {
@@ -188,6 +205,23 @@ a:hover {
     width: 60%;
     border: 0;
     border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.face-thumb {
+    border-radius: 100%;
+    width: 96px;
+    margin: 0 0 24px 0;
+}
+
+.quote .face-thumb {
+    margin: -176px 0 64px 0;
+    width: 120px;
+}
+
+.quote-stroke {
+    padding: 48px;
+    border: solid 1px #CACACA;
+    margin: 32px;
 }
 
 /* ---------- material icons ---------- */
@@ -225,6 +259,19 @@ a:hover {
     background-image: url(https://images.unsplash.com/photo-1505318591007-2e8a3edd6042?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2214&q=80);
 }
 
+#k_player01, #k_player02 {
+    position: relative;
+    padding-bottom: 56.25%;
+    /*padding-bottom: 75%;*/
+    height: 0;
+}
+#k_player01 iframe, #k_player02 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* ---------- mobile media query ---------- */
 
