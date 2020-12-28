@@ -277,6 +277,10 @@ a:hover {
 
 @media (max-width: 680px) {
 
+    .button {
+        margin: 0 0 32px 0;
+    }
+
     .bt, .br, .bb, .bl {
         border: 0;
         border-bottom: 1px solid #F2F2F2;
@@ -294,6 +298,10 @@ a:hover {
 
     .quote {
         padding: 64px;
+    }
+
+    .quote .face-thumb {
+        margin: -124px 0 64px 0;
     }
 
 }
