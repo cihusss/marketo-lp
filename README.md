@@ -1,6 +1,6 @@
-# Framework for creatinve landing pages in Marketo
+# Marketo Landing Page Framework
 
-This framework is specific to Marketo. It includes Marketo specific classes for editable elements and variables.
+This framework includes specific classes for editable elements and variables that are native only to Marketo.
 
 ## Usage
 
