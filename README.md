@@ -4,5 +4,5 @@ This framework includes specific classes for editable elements and variables tha
 
 ## Usage
 
-- HTML needs to be pasted within a template shell in Marketo.
-- CSS/JS assets need to be absolute paths, point to a server that can handle heavy traffic
+- HTML needs to be hosted within a Marketo template shell.
+- CSS/JS assets need to have absolute paths, pointing to a server that can preferably handle heavy traffic.
