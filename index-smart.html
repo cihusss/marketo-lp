@@ -20,15 +20,14 @@
     <meta class="mktoBoolean" id="toggle-h1a-form-wrap" mktoName="H1a / Form / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="false" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
     <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
-    <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#FFFFFF">
+    <meta class="mktoString" id="overlay-h1a" mktoName="H1a / Overlay" default="0%">
+    <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#f7f7f7">
+    <meta class="mktoColor" id="color-h1a-headline" mktoName="H1a / Headline Color" default="#4c4c4c">
+    <meta class="mktoColor" id="color-h1a-subhead" mktoName="H1a / Subhead Color" default="#4c4c4c">
+    <meta class="mktoColor" id="bg-h1a-button" mktoName="H1a / Button Background Color" default="#4c4c4c">
     <meta class="mktoString" id="href-h1a-url" mktoName="H1a / Button / URL" default="https://www.bisk.com">
 
-    <!-- H1b -->
-
-    <meta class="mktoBoolean" id="toggle-h1b" mktoName="H1b / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoString" id="img-bg-h1b" mktoName="H1b / Background Image" default="">
-    <meta class="mktoColor" id="color-h1b" mktoName="H1b / Background Color" default="#d8d8d8">
-    <meta class="mktoString" id="href-h1b-url" mktoName="H1b / URL" default="https://www.bisk.com">
+    <!-- H2a -->
 
     <style>
         #navbar-wrap {
@@ -40,22 +39,42 @@
             background-image: url(${img-bg-h1a});
             background-color: ${color-h1a};
             background-size: cover;
+            position: relative;
+        }
+
+        #h1a-headline {
+            color: ${color-h1a-headline};
         }
 
         #h1a-subhead {
             display: ${toggle-h1a-subhead};
+            color: ${color-h1a-subhead};
         }
 
         #h1a-button {
             display: ${toggle-h1a-button};
+            background-color: ${bg-h1a-button};
         }
 
         #h1a-full-width {
             width: ${toggle-h1a-full-width};
+            z-index: 11
         }
 
         #h1a-form-wrap {
             display: ${toggle-h1a-form-wrap};
+            z-index: 12;
+        }
+
+        #h1a-overlay {
+            background: black;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: ${overlay-h1a};
+            z-index: 10;
         }
 
         #h1b {
@@ -109,29 +128,10 @@
                 <div id="h1a-form-wrap" class="col-2-5 col-flex">
                     <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div>
                 </div>
+                <div id="h1a-overlay"></div>
             </div>
 
-            <!-- H1b -->
-            
-            <div id="h1b" class="row padding-hero-large bg-light-gray">
-                <div class="col-3-5">
-                    <h1 id="h1b-headline" class="mktoText" mktoName="H1b / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
-                    <a href="${href-h1b-url}" id="h1b-button" class="button mktoText" mktoName="H1b / Button Label">Button</a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-1">
-                    <div class="whitebreak"></div>
-                </div>
-            </div>
-
-             <div class="row padding-hero-large bg-light-gray">
-                <div class="col-3-5">
-                    <h1>Supercharge Your Career Possibilities In Computer Information Systems</h1>
-                    <h3>100% Online Degrees.</h3>
-                </div>
-            </div>
+            <!-- H2a -->
 
             <div class="row padding-hero-medium">
                 <div class="col-3-5 padding-type-right">
