@@ -305,9 +305,3 @@ a:hover {
     }
 
 }
-
-/* ---------- ids / vars ---------- */
-
-#h1a {
-    display: ${toggle-h1a;}
-}
