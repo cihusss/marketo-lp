@@ -4,11 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     
-    <meta class="mktoBoolean" id="toggle-h1a" mktoName="H1a" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-navbar" mktoName="Navbar / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="href-navbar-url01" mktoName="Navbar / URL #1" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url02" mktoName="Navbar / URL #2" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url03" mktoName="Navbar / URL #3" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url04" mktoName="Navbar / URL #4" default="https://www.bisk.com">
+    <meta class="mktoBoolean" id="toggle-h1a" mktoName="H1a / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
+    <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#FFFFFF">
 
     <style>
+        #navbar-wrap {
+            display: ${toggle-navbar};
+        }
+
         #h1a {
             display: ${toggle-h1a};
+            background-image: url(${img-bg-h1a});
+            background-color: ${color-h1a};
+            background-size: cover;
         }
     </style>
 
@@ -23,16 +37,16 @@
   </head>
   <body>
     <div class="lp-wrap">
-        <div class="navbar-wrap">
+        <div id="navbar-wrap" class="navbar-wrap">
             <div id="navbar" class="col-1-1 padding-navbar">
                 <div id="logo">
                     <img src="https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/2018/10/15031041/Bisk-Logo-Full-Color.svg">
                 </div>
                 <div id="links">
-                    <a href="#">Link #1</a>
-                    <a href="#">Link #2</a>
-                    <a href="#">Link #3</a>
-                    <a href="#">Link #4</a>
+                    <a href="${href-navbar-url01}" id="navbar-link-01" class="mktoText" mktoName="Navbar / Link Label #1">Link #1</a>
+                    <a href="${href-navbar-url02}" id="navbar-link-02" class="mktoText" mktoName="Navbar / Link Label #2">Link #2</a>
+                    <a href="${href-navbar-url03}" id="navbar-link-03" class="mktoText" mktoName="Navbar / Link Label #3">Link #3</a>
+                    <a href="${href-navbar-url04}" id="navbar-link-04" class="mktoText" mktoName="Navbar / Link Label #4">Link #4</a>
                 </div>
             </div>
         </div>
@@ -44,13 +58,13 @@
                 </div>
             </div>
             
-            <div class="row padding-hero-large" id="h1a">
+            <div id="h1a" class="row padding-hero-large">
                 <div class="col-3-5 padding-type-right">
-                    <h1>Supercharge Your Career Possibilities In Computer Information Systems</h1>
-                    <h3>100% Online Degrees.</h3>
+                    <h1 id="h1a-headline" class="mktoText" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                    <h3 id="h1a-subhead" class="mktoText" mktoName="H1a / Subhead">100% Online Degrees.</h3>
                 </div>
                 <div class="col-2-5 col-flex">
-                    <div class="form-wrap"></div>
+                    <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div>
                 </div>
             </div>
             
@@ -392,7 +406,7 @@
 
             <div class="row bg-dark-gray quote">
                 <div class="col-1-1 col-flex v-center">
-                    <img src="img/face.png" class="face-thumb">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
                     <h5 class="fg-white centertext"><span class="qq">&ldquo;</span>The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
                     <hr>
                     <h5 class="fg-white centertext">Student Name</h5>
@@ -402,13 +416,13 @@
 
             <div class="row padding-hero-large h-center">
                 <div class="col-2-5 padding-type-right">
-                    <img src="img/face.png" class="face-thumb">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
                     <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
                     <h5>Student Name</h5>
                     <p>Program, School,<br>Long title for this person</p>
                 </div>
                 <div class="col-2-5 padding-type-right">
-                    <img src="img/face.png" class="face-thumb">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
                     <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
                     <h5>Student Name</h5>
                     <p>Program, School,<br>Long title for this person</p>
