@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+    <!-- Navbar -->
+
+    <meta class="mktoBoolean" id="toggle-navbar" mktoName="Navbar / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="href-navbar-url01" mktoName="Navbar / URL #1" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url02" mktoName="Navbar / URL #2" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url03" mktoName="Navbar / URL #3" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-navbar-url04" mktoName="Navbar / URL #4" default="https://www.bisk.com">
+    
+    <!-- H1a -->
+
+    <meta class="mktoBoolean" id="toggle-h1a" mktoName="H1a / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-subhead" mktoName="H1a / Subhead / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-button" mktoName="H1a / Button / Display" default="true" true_value="inline-block" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-form-wrap" mktoName="H1a / Form / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="false" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
+    <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
+    <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#FFFFFF">
+    <meta class="mktoString" id="href-h1a-url" mktoName="H1a / Button / URL" default="https://www.bisk.com">
+
+    <!-- H1b -->
+
+    <meta class="mktoBoolean" id="toggle-h1b" mktoName="H1b / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="img-bg-h1b" mktoName="H1b / Background Image" default="">
+    <meta class="mktoColor" id="color-h1b" mktoName="H1b / Background Color" default="#d8d8d8">
+    <meta class="mktoString" id="href-h1b-url" mktoName="H1b / URL" default="https://www.bisk.com">
+
+    <style>
+        #navbar-wrap {
+            display: ${toggle-navbar};
+        }
+
+        #h1a {
+            display: ${toggle-h1a};
+            background-image: url(${img-bg-h1a});
+            background-color: ${color-h1a};
+            background-size: cover;
+        }
+
+        #h1a-subhead {
+            display: ${toggle-h1a-subhead};
+        }
+
+        #h1a-button {
+            display: ${toggle-h1a-button};
+        }
+
+        #h1a-full-width {
+            width: ${toggle-h1a-full-width};
+        }
+
+        #h1a-form-wrap {
+            display: ${toggle-h1a-form-wrap};
+        }
+
+        #h1b {
+            display: ${toggle-h1b};
+            background-image: url(${img-bg-h1b});
+            background-color: ${color-h1b};
+            background-size: cover;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Ovo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cihusss.github.io/marketo-lp/css/thegrid.css">
+    <link rel="stylesheet" type="text/css" href="https://cihusss.github.io/marketo-lp/css/base.css">
+    <script src="https://cdnapisec.kaltura.com/p/2353281/sp/235328100/embedIframeJs/uiconf_id/45992131/partner_id/2353281"></script>
+    <title>Marketo LP Framework</title>
+  </head>
+  <body>
+    <div class="lp-wrap">
+        <div id="navbar-wrap" class="navbar-wrap">
+            <div id="navbar" class="col-1-1 padding-navbar">
+                <div id="logo">
+                    <img src="https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/2018/10/15031041/Bisk-Logo-Full-Color.svg">
+                </div>
+                <div id="links">
+                    <a href="${href-navbar-url01}" id="navbar-link-01" class="mktoText" mktoName="Navbar / Link Label #1">Link #1</a>
+                    <a href="${href-navbar-url02}" id="navbar-link-02" class="mktoText" mktoName="Navbar / Link Label #2">Link #2</a>
+                    <a href="${href-navbar-url03}" id="navbar-link-03" class="mktoText" mktoName="Navbar / Link Label #3">Link #3</a>
+                    <a href="${href-navbar-url04}" id="navbar-link-04" class="mktoText" mktoName="Navbar / Link Label #4">Link #4</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid">
+            
+            <div class="row h-center">
+                <div class="col-45-5">
+                    <hr id="navbarline">
+                </div>
+            </div>
+
+            <!-- H1a -->
+            
+            <div id="h1a" class="row padding-hero-large">
+                <div id="h1a-full-width" class="col-3-5 padding-type-right">
+                    <h1 id="h1a-headline" class="mktoText" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                    <h3 id="h1a-subhead" class="mktoText" mktoName="H1a / Subhead">100% Online Degrees.</h3>
+                    <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
+                </div>
+                <div id="h1a-form-wrap" class="col-2-5 col-flex">
+                    <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div>
+                </div>
+            </div>
+
+            <!-- H1b -->
+            
+            <div id="h1b" class="row padding-hero-large bg-light-gray">
+                <div class="col-3-5">
+                    <h1 id="h1b-headline" class="mktoText" mktoName="H1b / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                    <a href="${href-h1b-url}" id="h1b-button" class="button mktoText" mktoName="H1b / Button Label">Button</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="whitebreak"></div>
+                </div>
+            </div>
+
+             <div class="row padding-hero-large bg-light-gray">
+                <div class="col-3-5">
+                    <h1>Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                    <h3>100% Online Degrees.</h3>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium">
+                <div class="col-3-5 padding-type-right">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+                <div class="col-2-5 col-flex">
+                    <div class="form-wrap margin-form-negative"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium">
+                <div class="col-3-5 padding-type-right">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+                <div class="col-2-5 col-flex">
+                    <div class="form-wrap"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium">
+                <div class="col-3-5 padding-type-right">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+                <div class="col-2-5">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8c2Nob29sfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="resimage">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium reverse">
+                <div class="col-2-5">
+                    <img src="https://images.unsplash.com/photo-1558021212-51b6ecfa0db9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1961&q=80" class="resimage">
+                </div>
+                <div class="col-3-5 padding-type-left">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-2-5">
+                    <h4 class="centertext">This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p class="centertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p class="centertext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-3-5">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="row">
+                        <div class="col-1-1">
+                            <p><strong>Click on the following to learn more about the program:</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-2 padding-type-right-small">
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                        </div>
+                        <div class="col-1-2 padding-type-left-small">
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                            <a href="#" class="padding-link">Dignissim diam quis enim lobortis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row bg-light-gray padding-hero-large h-center">
+                <div class="col-4-5 bg-dark-gray padding-hero-small">
+                    <h4 class="fg-white">This is a subheading introducing the content below.</h4>
+                    <p class="fg-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-3-5">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="row">
+                        <div class="col-1-4 h-center col-flex padding-icons">
+                            <i class="material-icons md-48 md-dark centertext">school</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                        <div class="col-1-4 h-center col-flex padding-icons">
+                            <i class="material-icons md-48 md-dark centertext">menu_book</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                        <div class="col-1-4 h-center col-flex padding-icons">
+                            <i class="material-icons md-48 md-dark centertext">emoji_events</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                        <div class="col-1-4 h-center col-flex padding-icons">
+                            <i class="material-icons md-48 md-dark centertext">local_pizza</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-2-5 padding-type-right-small">
+                    <h4>This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+                <div class="col-2-5 padding-type-left-small">
+                    <div class="row">
+                        <div class="col-1-2 h-center col-flex padding-icons br bb">
+                            <i class="material-icons md-48 md-dark centertext">school</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                        <div class="col-1-2 h-center col-flex padding-icons bb">
+                            <i class="material-icons md-48 md-dark centertext">menu_book</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-2 h-center col-flex padding-icons br">
+                            <i class="material-icons md-48 md-dark centertext">emoji_events</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                        <div class="col-1-2 h-center col-flex padding-icons">
+                            <i class="material-icons md-48 md-dark centertext">local_pizza</i>
+                            <p class="centertext">Icon Supporting Text One</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-4-5">
+                    <h4>The online learning experience</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="row">
+                        <div class="col-1-2 row-flex padding-icons-top">
+                            <i class="material-icons md-48 md-dark centertext padding-icons-right">school</i>
+                            <div class="col-1-1 padding-type-right-small">
+                                <h5>Icon Supporting Text One</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2 row-flex padding-icons-top">
+                            <i class="material-icons md-48 md-dark centertext padding-icons-right">menu_book</i>
+                            <div class="col-1-1 padding-type-right-small">
+                                <h5>Icon Supporting Text One</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1-2 row-flex padding-icons-top">
+                            <i class="material-icons md-48 md-dark centertext padding-icons-right">emoji_events</i>
+                            <div class="col-1-1 padding-type-right-small">
+                                <h5>Icon Supporting Text One</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                        <div class="col-1-2 row-flex padding-icons-top">
+                            <i class="material-icons md-48 md-dark centertext padding-icons-right">local_pizza</i>
+                            <div class="col-1-1 padding-type-right-small">
+                                <h5>Icon Supporting Text One</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-4-5">
+                    <h4>University Programs & Courses</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="row padding-type-top-small">
+                        <div class="col-1-1">
+                            <h5>Click on the following to learn more about the program:</h5>
+                        </div>
+                    </div>
+                    <div class="row padding-type-top-small">
+                        <div class="col-1-3 padding-type-right-small">
+                            <div class="card">
+                                <div class="card-image" id="card-image-one"></div>
+                                <p>Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                            </div>
+                        </div>
+                        <div class="col-1-3 padding-type-right-small">
+                            <div class="card">
+                                <div class="card-image" id="card-image-two"></div>
+                                <p>Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                            </div>
+                        </div>
+                        <div class="col-1-3 padding-type-right-small">
+                            <div class="card">
+                                <div class="card-image" id="card-image-three"></div>
+                                <p>Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center">
+                <div class="col-1-3 padding-type-right-small">
+                    <div class="card-bare">
+                        <h5>Dignissim diam quis enim lobortis</h5>
+                        <p>Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
+                        <h5>Learn More</h5>
+                    </div>
+                </div>
+                <div class="col-1-3 padding-type-right-small">
+                    <div class="card-bare">
+                        <h5>Dignissim diam quis enim lobortis</h5>
+                        <p>Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
+                        <h5>Learn More</h5>
+                    </div>
+                </div>
+                <div class="col-1-3 padding-type-right-small">
+                    <div class="card-bare">
+                        <h5>Dignissim diam quis enim lobortis</h5>
+                        <p>Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
+                        <h5>Learn More</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row bg-dark-gray quote">
+                <div class="col-1-1 col-flex v-center">
+                    <h5 class="fg-white centertext"><span class="qq">&ldquo;</span>The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <hr>
+                    <h5 class="fg-white centertext">Student Name</h5>
+                    <p class="fg-white centertext">Program, School,<br>Long title for this person</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="whitebreak"></div>
+                </div>
+            </div>
+
+            <div class="row bg-dark-gray quote">
+                <div class="col-1-1 col-flex v-center">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
+                    <h5 class="fg-white centertext"><span class="qq">&ldquo;</span>The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <hr>
+                    <h5 class="fg-white centertext">Student Name</h5>
+                    <p class="fg-white centertext">Program, School,<br>Long title for this person</p>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-2-5 padding-type-right">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
+                    <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5>Student Name</h5>
+                    <p>Program, School,<br>Long title for this person</p>
+                </div>
+                <div class="col-2-5 padding-type-right">
+                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
+                    <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5>Student Name</h5>
+                    <p>Program, School,<br>Long title for this person</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-2-5 padding-type-right quote-stroke">
+                    <h5><span class="qq qq-override">&ldquo;</span>The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5>Student Name</h5>
+                    <p>Program, School,<br>Long title for this person</p>
+                </div>
+                <div class="col-2-5 padding-type-right quote-stroke">
+                    <h5><span class="qq qq-override">&ldquo;</span>The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5>Student Name</h5>
+                    <p>Program, School,<br>Long title for this person</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-1-2 padding-type-right">
+                    <h4>This is a subheading introducing the video.</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                </div>
+                <div class="col-1-2">
+                    <div id="k_player01">
+                        <a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-1-1">
+                    <div id="k_player02">
+                        <a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-2-5 padding-type-right">
+                    <h4>This is a subheading introducing the video.</h4>
+                    <p class="padding-type-bottom-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <a href="#" class="button">Get More Info</a>
+                </div>
+                <div class="col-2-5 padding-type-left">
+                    <img src="https://images.unsplash.com/photo-1608833970687-99bc4f54898d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" class="resimage">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-large h-center">
+                <div class="col-1-2 col-flex col-retain">
+                    <h4 class="centertext">Prepare yourself to meet any challenge and drive success</h4>
+                    <p class="padding-type-bottom-small centertext">Download a certificate program guide for information regarding pricing, payment options and assistance, course requirements and more.</p>
+                    <a href="#" class="button button-wide">Get More Info</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <div class="row padding-hero-medium h-center bg-light-gray">
+                <div class="col-1-2 col-flex col-retain">
+                    <h4 class="centertext">Prepare yourself to meet any challenge and drive success</h4>
+                </div>
+                <div class="col-1-2 padding-type-left col-flex col-retain">
+                    <a href="#" class="button button-wide">Get More Info</a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cihusss.github.io/marketo-lp/js/main.js"></script>
+  </body>
+</html>

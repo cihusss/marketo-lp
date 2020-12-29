@@ -4,14 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     
+    <!-- Navbar -->
+
     <meta class="mktoBoolean" id="toggle-navbar" mktoName="Navbar / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoString" id="href-navbar-url01" mktoName="Navbar / URL #1" default="https://www.bisk.com">
     <meta class="mktoString" id="href-navbar-url02" mktoName="Navbar / URL #2" default="https://www.bisk.com">
     <meta class="mktoString" id="href-navbar-url03" mktoName="Navbar / URL #3" default="https://www.bisk.com">
     <meta class="mktoString" id="href-navbar-url04" mktoName="Navbar / URL #4" default="https://www.bisk.com">
+    
+    <!-- H1a -->
+
     <meta class="mktoBoolean" id="toggle-h1a" mktoName="H1a / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-subhead" mktoName="H1a / Subhead / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-button" mktoName="H1a / Button / Display" default="true" true_value="inline-block" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-form-wrap" mktoName="H1a / Form / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="false" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
     <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
     <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#FFFFFF">
+    <meta class="mktoString" id="href-h1a-url" mktoName="H1a / Button / URL" default="https://www.bisk.com">
+
+    <!-- H1b -->
+
+    <meta class="mktoBoolean" id="toggle-h1b" mktoName="H1b / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="img-bg-h1b" mktoName="H1b / Background Image" default="">
+    <meta class="mktoColor" id="color-h1b" mktoName="H1b / Background Color" default="#d8d8d8">
+    <meta class="mktoString" id="href-h1b-url" mktoName="H1b / URL" default="https://www.bisk.com">
 
     <style>
         #navbar-wrap {
@@ -22,6 +39,29 @@
             display: ${toggle-h1a};
             background-image: url(${img-bg-h1a});
             background-color: ${color-h1a};
+            background-size: cover;
+        }
+
+        #h1a-subhead {
+            display: ${toggle-h1a-subhead};
+        }
+
+        #h1a-button {
+            display: ${toggle-h1a-button};
+        }
+
+        #h1a-full-width {
+            width: ${toggle-h1a-full-width};
+        }
+
+        #h1a-form-wrap {
+            display: ${toggle-h1a-form-wrap};
+        }
+
+        #h1b {
+            display: ${toggle-h1b};
+            background-image: url(${img-bg-h1b});
+            background-color: ${color-h1b};
             background-size: cover;
         }
     </style>
@@ -57,21 +97,26 @@
                     <hr id="navbarline">
                 </div>
             </div>
+
+            <!-- H1a -->
             
             <div id="h1a" class="row padding-hero-large">
-                <div class="col-3-5 padding-type-right">
+                <div id="h1a-full-width" class="col-3-5 padding-type-right">
                     <h1 id="h1a-headline" class="mktoText" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
                     <h3 id="h1a-subhead" class="mktoText" mktoName="H1a / Subhead">100% Online Degrees.</h3>
+                    <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
                 </div>
-                <div class="col-2-5 col-flex">
+                <div id="h1a-form-wrap" class="col-2-5 col-flex">
                     <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div>
                 </div>
             </div>
+
+            <!-- H1b -->
             
-            <div class="row padding-hero-large bg-light-gray">
+            <div id="h1b" class="row padding-hero-large bg-light-gray">
                 <div class="col-3-5">
-                    <h1>Supercharge Your Career Possibilities In Computer Information Systems</h1>
-                    <a href="#" class="button">Button</a>
+                    <h1 id="h1b-headline" class="mktoText" mktoName="H1b / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                    <a href="${href-h1b-url}" id="h1b-button" class="button mktoText" mktoName="H1b / Button Label">Button</a>
                 </div>
             </div>
 
