@@ -39,6 +39,8 @@ a img { border: 0; outline: none; }
     align-items: center;
 }
 
+.col-margin { margin: 16px; }
+
 .row-flex {
     display: flex;
     flex-direction: row;
