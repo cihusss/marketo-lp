@@ -152,11 +152,15 @@ a:hover {
     height: 120px;
 }
 
+.card {
+    display: block;
+
+}
+
 .card, .card-bare {
     border: 1px solid #DCDCDC;
     border-radius: 4px;
     transition: margin-top .2s ease-out;
-    cursor: pointer;
 }
 
 .card p {

@@ -60,9 +60,9 @@
 
     <!-- H2f -->
     <meta class="mktoBoolean" id="toggle-h2f" mktoName="H2f / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoString" id="img-bg-h1f-card01" mktoName="H2f / Card #1 / Background Image" default="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACircle-icons-image.svg&psig=AOvVaw1WzW8PPUJmP5IfzNZI156-&ust=1609443693251000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIi-1Y679u0CFQAAAAAdAAAAABAI">
-    <meta class="mktoString" id="img-bg-h1f-card02" mktoName="H2f / Card #2 / Background Image" default="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACircle-icons-image.svg&psig=AOvVaw1WzW8PPUJmP5IfzNZI156-&ust=1609443693251000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIi-1Y679u0CFQAAAAAdAAAAABAI">
-    <meta class="mktoString" id="img-bg-h1f-card03" mktoName="H2f / Card #3 / Background Image" default="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACircle-icons-image.svg&psig=AOvVaw1WzW8PPUJmP5IfzNZI156-&ust=1609443693251000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIi-1Y679u0CFQAAAAAdAAAAABAI">
+    <meta class="mktoString" id="img-bg-h1f-card01" mktoName="H2f / Card #1 / Background Image" default="https://upload.wikimedia.org/wikipedia/commons/2/24/Circle-icons-image.svg">
+    <meta class="mktoString" id="img-bg-h1f-card02" mktoName="H2f / Card #2 / Background Image" default="https://upload.wikimedia.org/wikipedia/commons/2/24/Circle-icons-image.svg">
+    <meta class="mktoString" id="img-bg-h1f-card03" mktoName="H2f / Card #3 / Background Image" default="https://upload.wikimedia.org/wikipedia/commons/2/24/Circle-icons-image.svg">
 
     <style>
 
@@ -220,15 +220,15 @@
         }
 
         #h2f #card-image-one {
-            background-image: url(${});
+            background-image: url(${img-bg-h1f-card01});
         }
 
         #h2f #card-image-two {
-            background-image: url(${});
+            background-image: url(${img-bg-h1f-card02});
         }
 
         #h2f #card-image-three {
-            background-image: url(${});
+            background-image: url(${img-bg-h1f-card03});
         }
 
     </style>
@@ -472,22 +472,22 @@
                     </div>
                     <div id="card-wrap" class="row padding-type-top-small">
                         <div class="col-1-3 padding-type-right-small">
-                            <div class="card">
-                                <div class="card-image" id="card-image-one"></div>
+                            <a href="#" class="card">
+                                <div id="card-image-one" class="card-image"></div>
                                 <p id="h2f-card01-paragraph" class="mktoText" mktoName="H2f / Card #1 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-1-3 padding-type-right-small">
-                            <div class="card">
-                                <div class="card-image" id="card-image-two"></div>
+                            <a href="#" class="card">
+                                <div id="card-image-two" class="card-image"></div>
                                 <p id="h2f-card02-paragraph" class="mktoText" mktoName="H2f / Card #2 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-1-3 padding-type-right-small">
-                            <div class="card">
-                                <div class="card-image" id="card-image-three"></div>
+                            <a href="#" class="card">
+                                <div id="card-image-three" class="card-image"></div>
                                 <p id="h2f-card03-paragraph" class="mktoText" mktoName="H2f / Card #3 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
