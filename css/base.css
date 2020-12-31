@@ -43,14 +43,13 @@ a:hover {
 }
 
 .qq {
-    content: open-quote;
     font-size: 192px;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     vertical-align: bottom;
     display: inline-block;
+    margin-left: -40px;
     position: absolute;
-    left: 0;
     margin: 12px 0 0 -60px;
     color: rgba(255,255,255,0.2);
 }
@@ -223,6 +222,8 @@ a:hover {
     position: absolute;
     margin: 12px 0 0 -60px;
     color: rgba(255,255,255,0.2);
+    content: open-quote;
+    left: 0;
 }
 
 .quote p {
