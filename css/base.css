@@ -42,13 +42,18 @@ a:hover {
     display: inline-block;
 }
 
+.qq-wrap {
+    position: relative;
+}
+
 .qq {
     font-size: 192px;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     vertical-align: bottom;
     display: inline-block;
-    margin-left: -40px;
+    left: 40px;
+    top: -110px;
     position: absolute;
     margin: 12px 0 0 -60px;
     color: rgba(255,255,255,0.2);
