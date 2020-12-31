@@ -212,7 +212,7 @@ a:hover {
     position: relative;
 }
 
-.quote h5:before {
+/*.quote h5:before {
     font-size: 192px;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
@@ -224,7 +224,7 @@ a:hover {
     color: rgba(255,255,255,0.2);
     content: open-quote;
     left: 0;
-}
+}*/
 
 .quote p {
     margin: 0;
