@@ -39,7 +39,10 @@ a img { border: 0; outline: none; }
     align-items: center;
 }
 
-.col-margin { margin: 0 24px; }
+.col-margin {
+    margin: 0 24px;
+    flex: 1 1 0px;
+}
 
 .row-flex {
     display: flex;
