@@ -67,6 +67,12 @@
     <meta class="mktoString" id="href-h1f-card02" mktoName="H2f / Card #2 / URL" default="https://www.bisk.com">
     <meta class="mktoString" id="href-h1f-card03" mktoName="H2f / Card #3 / URL" default="https://www.bisk.com">
 
+    <!-- H2e -->
+    <meta class="mktoBoolean" id="toggle-h2e" mktoName="H2e / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="href-h1e-card01" mktoName="H2e / Card #1 / URL" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-h1e-card02" mktoName="H2e / Card #2 / URL" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-h1e-card03" mktoName="H2e / Card #3 / URL" default="https://www.bisk.com">
+
     <style>
 
         /* move to grid */
@@ -220,11 +226,11 @@
         }
 
         #h2f .col-1-3:first-child {
-            padding: 0 32px 0 0 !important;
+            padding: 0 32px 0 0;
         }
 
         #h2f .col-1-3:last-child {
-            padding: 0 0 0 32px !important;
+            padding: 0 0 0 32px;
         }
 
         #h2f #card-wrap {
@@ -245,6 +251,32 @@
 
         #h2f #card-image-three {
             background-image: url(${img-bg-h1f-card03});
+        }
+
+        @media (max-width: 680px) {
+            #h1a-full-width {
+                width: 100%;
+            }
+
+            #h2a {
+                flex-direction: column;
+            }
+
+            #h2e i {
+                padding-right: 16px;
+            }
+
+            #h2f .col-1-3 {
+                padding: 0;
+            }
+
+            #h2f .col-1-3:first-child {
+                padding: 0;
+            }
+
+            #h2f .col-1-3:last-child {
+                padding: 0;
+            }
         }
 
     </style>
@@ -523,21 +555,21 @@
                     <div class="card-bare">
                         <h5 id="h2e-card01-headline" class="mktoText" mktoName="H2e / Card #1 Headline">Dignissim diam quis enim lobortis</h5>
                         <p id="h2e-card01-paragraph" class="mktoText" mktoName="H2e / Card #1 Paragraph">Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
-                        <h5 id="h2e-card01-link" class="mktoText" mktoName="H2e / Card #1 Link Label">Learn More</h5>
+                        <a href="${href-h1e-card01}" id="h2e-card01-link" class="mktoText" mktoName="H2e / Card #1 Link Label">Learn More</a>
                     </div>
                 </div>
                 <div class="col-margin no-col-padding">
                     <div class="card-bare">
                         <h5 id="h2e-card02-headline" class="mktoText" mktoName="H2e / Card #2 Headline">Dignissim diam quis enim lobortis</h5>
                         <p id="h2e-card02-paragraph" class="mktoText" mktoName="H2e / Card #2 Paragraph">Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
-                        <h5 id="h2e-card02-link" class="mktoText" mktoName="H2e / Card #2 Link Label">Learn More</h5>
+                        <a href="${href-h1e-card02}" id="h2e-card02-link" class="mktoText" mktoName="H2e / Card #2 Link Label">Learn More</a>
                     </div>
                 </div>
                 <div class="col-margin no-col-padding">
                     <div class="card-bare">
                         <h5 id="h2e-card03-headline" class="mktoText" mktoName="H2e / Card #3 Headline">Dignissim diam quis enim lobortis</h5>
                         <p id="h2e-card03-paragraph" class="mktoText" mktoName="H2e / Card #3 Paragraph">Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
-                        <a id="h2e-card03-link" class="mktoText" mktoName="H2e / Card #3 Link Label">Learn More</a>
+                        <a href="${href-h1e-card03}" id="h2e-card03-link" class="mktoText" mktoName="H2e / Card #3 Link Label">Learn More</a>
                     </div>
                 </div>
             </div>

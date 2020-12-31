@@ -171,6 +171,7 @@ a:hover {
     font-size: 18px;
     color: #4C4C4C;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .card:hover, .card-bare:hover {
