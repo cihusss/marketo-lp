@@ -209,6 +209,19 @@ a:hover {
 .quote h5 {
     margin: 0;
     line-height: 2em;
+    position: relative;
+}
+
+.quote h5:before {
+    font-size: 192px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-left: -40px;
+    position: absolute;
+    margin: 12px 0 0 -60px;
+    color: rgba(255,255,255,0.2);
 }
 
 .quote p {

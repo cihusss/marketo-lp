@@ -73,6 +73,10 @@
     <meta class="mktoString" id="href-h1f-card02" mktoName="H2f / Card #2 / URL" default="https://www.bisk.com">
     <meta class="mktoString" id="href-h1f-card03" mktoName="H2f / Card #3 / URL" default="https://www.bisk.com">
 
+    <!-- H3q-lg -->
+    <meta class="mktoBoolean" id="toggle-h3q-lg" mktoName="H3q-lg / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h3q-lg-image" mktoName="H3q-lg / Image / Display" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+
     <style>
 
         /* move to grid */
@@ -252,6 +256,14 @@
 
         #h2f #card-image-three {
             background-image: url(${img-bg-h1f-card03});
+        }
+
+        #h3q-lg {
+            display: ${toggle-h3q-lg};
+        }
+
+        #h3q-lg-img {
+            display: ${toggle-h3q-lg-image};
         }
 
         @media (max-width: 680px) {
@@ -552,7 +564,7 @@
                             <h5 id="h2f-card-headline" class="mktoText" mktoName="H2f / Card Headline">Click on the following to learn more about the program:</h5>
                         </div>
                     </div>
-                    <div id="card-wrap" class="row padding-type-top-small">
+                    <div id="card-wrap" class="row padding-type-top-small padding-type-bottom-small">
                         <div class="col-1-3 padding-type-right-small">
                             <a href="${href-h1f-card01}" id="h2f-card01-url" class="card">
                                 <div id="card-image-one" class="card-image"></div>
