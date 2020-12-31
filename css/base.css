@@ -167,6 +167,12 @@ a:hover {
     padding: 8px 24px;
 }
 
+.card-bare a {
+    font-size: 18px;
+    color: #4C4C4C;
+    font-weight: 700;
+}
+
 .card:hover, .card-bare:hover {
     /*margin-top: -16px;*/
     filter: grayscale(100%)
