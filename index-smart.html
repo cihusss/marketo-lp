@@ -58,6 +58,12 @@
     <!-- H2d -->
     <meta class="mktoBoolean" id="toggle-h2d" mktoName="H2d / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
 
+    <!-- H2e -->
+    <meta class="mktoBoolean" id="toggle-h2e" mktoName="H2e / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoString" id="href-h1e-card01" mktoName="H2e / Card #1 / URL" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-h1e-card02" mktoName="H2e / Card #2 / URL" default="https://www.bisk.com">
+    <meta class="mktoString" id="href-h1e-card03" mktoName="H2e / Card #3 / URL" default="https://www.bisk.com">
+
     <!-- H2f -->
     <meta class="mktoBoolean" id="toggle-h2f" mktoName="H2f / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoString" id="img-bg-h1f-card01" mktoName="H2f / Card #1 / Background Image" default="https://images.unsplash.com/photo-1544507888-56d73eb6046e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80">
@@ -66,12 +72,6 @@
     <meta class="mktoString" id="href-h1f-card01" mktoName="H2f / Card #1 / URL" default="https://www.bisk.com">
     <meta class="mktoString" id="href-h1f-card02" mktoName="H2f / Card #2 / URL" default="https://www.bisk.com">
     <meta class="mktoString" id="href-h1f-card03" mktoName="H2f / Card #3 / URL" default="https://www.bisk.com">
-
-    <!-- H2e -->
-    <meta class="mktoBoolean" id="toggle-h2e" mktoName="H2e / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoString" id="href-h1e-card01" mktoName="H2e / Card #1 / URL" default="https://www.bisk.com">
-    <meta class="mktoString" id="href-h1e-card02" mktoName="H2e / Card #2 / URL" default="https://www.bisk.com">
-    <meta class="mktoString" id="href-h1e-card03" mktoName="H2e / Card #3 / URL" default="https://www.bisk.com">
 
     <style>
 
@@ -98,6 +98,7 @@
             background-image: url(${img-bg-h1a});
             background-color: ${color-h1a};
             background-size: cover;
+            background-position: center center;
             position: relative;
         }
 
@@ -351,7 +352,7 @@
             <!-- H2b -->
 
             <div id="h2b" class="row padding-hero-medium h-center">
-                <div class="col-4-5">
+                <div class="col-3-5">
                     <h4 id="h2b-headline" class="centertext mktoText" mktoName="H2b / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
                     <p id="h2b-paragraph" class="centertext mktoText" mktoName="H2b / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                     <div id="h2b-links">
@@ -508,46 +509,6 @@
                 </div>
             </div>
 
-            <!-- H2f -->
-
-            <div id="h2f" class="row padding-hero-medium h-center">
-                <div class="col-4-5">
-                    <h4 id="h2f-headline" class="mktoText" mktoName="H2f / Headline">University Programs & Courses</h4>
-                    <p id="h2f-paragraph" class="mktoText" mktoName="H2f / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
-                    <div class="row padding-type-top-small">
-                        <div class="col-1-1 no-col-padding">
-                            <h5 id="h2f-card-headline" class="mktoText" mktoName="H2f / Card Headline">Click on the following to learn more about the program:</h5>
-                        </div>
-                    </div>
-                    <div id="card-wrap" class="row padding-type-top-small">
-                        <div class="col-1-3 padding-type-right-small">
-                            <a href="${href-h1f-card01}" id="h2f-card01-url" class="card">
-                                <div id="card-image-one" class="card-image"></div>
-                                <p id="h2f-card01-paragraph" class="mktoText" mktoName="H2f / Card #1 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </a>
-                        </div>
-                        <div class="col-1-3 padding-type-right-small">
-                            <a href="${href-h1f-card02}" d="h2f-card02-url" class="card">
-                                <div id="card-image-two" class="card-image"></div>
-                                <p id="h2f-card02-paragraph" class="mktoText" mktoName="H2f / Card #2 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </a>
-                        </div>
-                        <div class="col-1-3 padding-type-right-small">
-                            <a href="${href-h1f-card03}" d="h2f-card03-url" class="card">
-                                <div id="card-image-three" class="card-image"></div>
-                                <p id="h2f-card03-paragraph" class="mktoText" mktoName="H2f / Card #3 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-1">
-                    <div class="grayline"></div>
-                </div>
-            </div>
-
             <!-- H2e -->
 
             <div id="h2e" class="row padding-hero-medium h-center">
@@ -570,6 +531,52 @@
                         <h5 id="h2e-card03-headline" class="mktoText" mktoName="H2e / Card #3 Headline">Dignissim diam quis enim lobortis</h5>
                         <p id="h2e-card03-paragraph" class="mktoText" mktoName="H2e / Card #3 Paragraph">Nunc vel lacus. Phasellus eletum congue massa, ultrices sceleque ipsum aliquet ac. Nam cursus. Nunc vel lacus. Phasellus.</p>
                         <a href="${href-h1e-card03}" id="h2e-card03-link" class="mktoText" mktoName="H2e / Card #3 Link Label">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-1">
+                    <div class="grayline"></div>
+                </div>
+            </div>
+
+            <!-- H2f -->
+
+            <div id="h2f" class="row padding-hero-medium h-center">
+                <div class="col-4-5">
+                    <h4 id="h2f-headline" class="mktoText" mktoName="H2f / Headline">University Programs & Courses</h4>
+                    <p id="h2f-paragraph" class="mktoText" mktoName="H2f / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="row padding-type-top-small">
+                        <div class="col-1-1 no-col-padding">
+                            <h5 id="h2f-card-headline" class="mktoText" mktoName="H2f / Card Headline">Click on the following to learn more about the program:</h5>
+                        </div>
+                    </div>
+                    <div id="card-wrap" class="row padding-type-top-small">
+                        <div class="col-1-3 padding-type-right-small">
+                            <a href="${href-h1f-card01}" id="h2f-card01-url" class="card">
+                                <div id="card-image-one" class="card-image"></div>
+                                <div class="card-text-wrap">
+                                    <p id="h2f-card01-paragraph" class="mktoText" mktoName="H2f / Card #1 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-1-3 padding-type-right-small">
+                            <a href="${href-h1f-card02}" d="h2f-card02-url" class="card">
+                                <div id="card-image-two" class="card-image"></div>
+                                <div class="card-text-wrap">
+                                    <p id="h2f-card02-paragraph" class="mktoText" mktoName="H2f / Card #2 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-1-3 padding-type-right-small">
+                            <a href="${href-h1f-card03}" d="h2f-card03-url" class="card">
+                                <div id="card-image-three" class="card-image"></div>
+                                <div class="card-text-wrap">
+                                    <p id="h2f-card03-paragraph" class="mktoText" mktoName="H2f / Card #3 Paragraph">Dignissim diam quis enim lobortis dignissim diam quis enim lobortis</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
