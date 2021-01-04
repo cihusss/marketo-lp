@@ -10,21 +10,11 @@ var userConfig = {
    },
    requiredFields: [
       {
-         name: "FirstName",
+         name: "LastName",
          message: "This field is required."
-      },
-      {
-         name: "Company",
-         message: "This field is required, too."
-      },
-      {
-         name: "Unsubscribed",
-         message: "Gotta check this one."
       }
    ]
 };
-
-/* --- NO NEED TO EDIT BELOW THIS LINE! --- */
 
 MktoForms2.whenReady(function(form) {
    var formEl = form.getFormElem()[0],
