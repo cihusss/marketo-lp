@@ -158,8 +158,17 @@ MktoForms2.whenReady(function(form) {
   for (i = 0; i < labels.length; i++) {
     label = document.getElementsByClassName('mktoLabel')[i];
     name = label.innerHTML.split("</div>").pop();;
-    input = label.nextSibling.nextSibling
+    input = label.nextSibling.nextSibling;
     input.setAttribute('placeholder', name);
+  }
+
+  for (i = 0; i < inputs.length; i++) {
+      input = document.getElementsByClassName('mktoField')[i];
+      input.addEventListener('click', function() {
+        boo = this.previousSibling.previousSibling
+        console.log(boo);
+        boo.style.opacity = '0';
+      });
   }
 
 });
