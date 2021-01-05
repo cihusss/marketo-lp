@@ -153,19 +153,13 @@ MktoForms2.whenReady(function(form) {
    form.onValidate(isCustomValid);
    fsaatSet();
 
-    labels = document.getElementsByClassName('mktoLabel');
-    inputs = document.getElementsByClassName('mktoField');
-    console.log('labels: ' + labels.length)
-    console.log('inputs: ' + inputs.length)
+  labels = document.getElementsByClassName('mktoLabel');
    
-    for (i = 0; i < labels.length; i++) {
-      // console.log(i);
-      label = document.getElementsByClassName('mktoLabel')[i];
-      name = label.innerHTML.split("</div>").pop();;
-      console.log(name);
-      input = label.nextElementSibling.nextElementSibling
-      console.log(input);
-      // input = document.getElementsByClassName('mktoTextField')[i];
-      // input.setAttribute('placeholder', label);
-   }
+  for (i = 0; i < labels.length; i++) {
+    label = document.getElementsByClassName('mktoLabel')[i];
+    name = label.innerHTML.split("</div>").pop();;
+    input = label.nextSibling.nextSibling
+    input.setAttribute('placeholder', name);
+  }
+
 });
