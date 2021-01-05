@@ -24,11 +24,12 @@
     <meta class="mktoColor" id="color-h1a-subhead" mktoName="H1a / Subhead Color" default="#4c4c4c">
     <meta class="mktoColor" id="bg-h1a-button" mktoName="H1a / Button Background Color" default="#4c4c4c">
     <meta class="mktoString" id="href-h1a-url" mktoName="H1a / Button / URL" default="https://www.bisk.com">
+    <meta class="mktoString" id="form-h1a-id" mktoName="H1a / Form / ID" default="">
 
     <!-- H2a -->
     <meta class="mktoBoolean" id="toggle-h2a" mktoName="H2a / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoBoolean" id="toggle-h2a-form" mktoName="H2a / Form / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
-    <meta class="mktoBoolean" id="toggle-h2a-img" mktoName="H2a / Image / Display" default="false" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h2a-form" mktoName="H2a / Form / Display" default="false" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h2a-img" mktoName="H2a / Image / Display" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h2a-reverse" mktoName="H2a / Layout / Reverse" default="false" true_value="row-reverse" false_value="row" false_value_name="Normal" true_value_name="Reverse">
     <meta class="mktoString" id="formshift-h2a" mktoName="H2a / Form Shift" default="-324px">
 
@@ -126,6 +127,9 @@
         }
 
         #h1a-form-wrap {
+            /*background: rgba(255,255,255,0.3);*/
+            border-radius: 4px;
+            min-height: 240px;
             display: ${toggle-h1a-form-wrap};
             z-index: 12;
         }
@@ -285,6 +289,127 @@
            bottom: -54px !important;
         }
 
+        .mktoForm {
+            background: #ffffff;
+            padding: 16px 24px 24px 24px;
+            border-radius: 4px;
+            width: 100% !important;
+            /*display: flex;*/
+            /*flex-direction: column;*/
+        }
+
+        .mktoForm label {
+            width: auto !important;
+            /*padding: 16px 0 4px 0 !important;*/
+            top: 20px;
+            display: block;
+            position: absolute;
+            left: 6px;
+            font-size: 9px;
+        }
+
+        .mktoForm input {
+            width: 100% !important;
+            height: 42px !important; 
+            border: 1px solid #a9a9a9;
+            border-radius: 4px;
+            padding: 12px 6px 0 6px !important;
+        }
+
+        .mktoForm select {
+            width: 100% !important;
+            height: 42px !important; 
+            border: 1px solid #a9a9a9;
+            border-radius: 4px;
+            padding: 12px 6px 0 2px !important;
+        }
+
+        .mktoForm fieldset {
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        .mktoFieldDescriptor {
+            width: 100%;
+            margin: 0 !important;
+        }
+
+        .mktoFieldWrap {
+            width: 100%;
+        }
+
+        .mktoOffset {
+            display: none;
+        }
+
+        .mktoButtonWrap {
+            width: 100%;
+            margin: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .mktoButton {
+            width: 30%;
+            border-radius: 4px;
+            height: 32px;
+            background: #cc0000 !important;
+            border: none !important;
+            margin: 6px 0 0 8px !important;
+        }
+
+        .mktoButton[data-dir="prev"] {
+            background: #888888 !important; 
+        }
+
+        .mktoForm .mktoRequiredField label.mktoLabel {
+            font-weight: normal !important;
+        }
+
+        .mktoAsterix {
+            padding-left: 4px !important;
+        }
+
+        .mktoErrorMsg {
+            background: #cc0000 !important;
+            border-radius: 4px !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .mktoErrorArrow {
+            background-position: #cc0000 !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        /*.mktoGutter {
+            display: none;
+        }*/
+
+        /*.mktoButtonRow {
+            text-align: right;
+            margin: 0;
+        }*/
+
+        /*.mktoButtonWrap {
+            display: flex;
+            margin: 16px 0 0 0;
+        }*/
+
+        /*.mktoButton {
+            border: none;
+            background: #5B5B5B;
+            height: 32px;
+            border-radius: 4px;
+            color: white;
+        }*/
+
+        /*.mktoFieldDescriptor {
+            height: 64px;
+        }*/
+
+
         @media (max-width: 680px) {
             #h1a-full-width {
                 width: 100%;
@@ -356,8 +481,9 @@
                     <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
                 </div>
                 <div id="h1a-form-wrap" class="col-2-5 col-flex">
-                    <form id="mktoForm_4953"></form>
-                    <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div>
+                    <!-- <form id="mktoForm_4953"></form> -->
+                    <form id="mktoForm_${form-h1a-id}"></form>
+                    <!-- <div id="h1a-form" class="form-wrap mktoForm" mktoName="H1a / Form"></div> -->
                 </div>
                 <div id="h1a-overlay"></div>
             </div>
@@ -758,7 +884,8 @@
         <script src="https://cihusss.github.io/marketo-lp/js/form.js"></script>
         <script>
 
-            MktoForms2.loadForm("https://learn.bisk.com", "058-NIT-467", 4953);
+            // MktoForms2.loadForm("https://learn.bisk.com", "058-NIT-467", 4953);
+            MktoForms2.loadForm("https://learn.bisk.com", "058-NIT-467", ${form-h1a-id});
 
         </script>
   </body>
