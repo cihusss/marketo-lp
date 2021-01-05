@@ -157,19 +157,28 @@ MktoForms2.whenReady(function(form) {
   inputs = document.getElementsByClassName('mktoField');
    
   for (i = 0; i < labels.length; i++) {
-    label = document.getElementsByClassName('mktoLabel')[i];
-    name = label.innerHTML.split("</div>").pop();;
-    input = label.nextSibling.nextSibling;
-    input.setAttribute('placeholder', name);
-  }
-
-  for (i = 0; i < inputs.length; i++) {
+      label = document.getElementsByClassName('mktoLabel')[i];
+      label.style.opacity = '0';
+      name = label.innerHTML.split("</div>").pop();;
+      input = label.nextSibling.nextSibling;
+      input.setAttribute('placeholder', name);
+   }
+   
+   for (i = 0; i < inputs.length; i++) {
       input = document.getElementsByClassName('mktoField')[i];
-      input.addEventListener('click', function() {
-        boo = this.previousSibling.previousSibling
-        console.log(boo);
-        boo.style.opacity = '1';
+      input.addEventListener('focusin', function() {
+         boo = this.previousSibling.previousSibling;
+         boo.style.opacity = '1';
       });
-  }
+      input.addEventListener('focusout', function() {
+         boo = this.previousSibling.previousSibling;
+         if(this.value == "") {
+            boo.style.opacity = '0';
+         }
+         else {
+            boo.style.opacity = '1';
+         }
+      });
+   }
 
 });
