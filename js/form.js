@@ -179,7 +179,7 @@ MktoForms2.whenReady(function(form) {
   for (i = 0; i < labels.length; i++) {
       label = document.getElementsByClassName('mktoLabel')[i];
       label.style.opacity = '0';
-      name = label.innerHTML.split("</div>").pop();;
+      name = label.innerHTML.split("</div>").pop();
       input = label.nextSibling.nextSibling;
       input.setAttribute('placeholder', name);
    }
@@ -189,9 +189,11 @@ MktoForms2.whenReady(function(form) {
       input.addEventListener('focusin', function() {
          boo = this.previousSibling.previousSibling;
          boo.style.opacity = '1';
+         placeholder = this.setAttribute('placeholder', '');
       });
       input.addEventListener('focusout', function() {
          boo = this.previousSibling.previousSibling;
+         placeholder = this.setAttribute('placeholder', boo.innerHTML.split("</div>").pop());
          if(this.value == "") {
             boo.style.opacity = '0';
          }
