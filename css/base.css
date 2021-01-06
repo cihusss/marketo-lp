@@ -313,7 +313,7 @@ a:hover {
 
 /* ---------- mobile media query ---------- */
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
 
     .button {
         margin: 0 0 32px 0;

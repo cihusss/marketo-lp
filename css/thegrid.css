@@ -87,7 +87,7 @@ a img { border: 0; outline: none; }
 .padding-link { padding: 4px 0; display: inline-block; }
 .padding-link:first-child { padding-top: 16px; }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
 
     .row {
         flex-direction: column;
