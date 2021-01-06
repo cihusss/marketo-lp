@@ -319,6 +319,10 @@ a:hover {
         font-size: 42px;
     }
 
+    #navbar {
+        padding: 8px 32px;
+    }
+
     .button {
         margin: 0 0 32px 0;
     }
