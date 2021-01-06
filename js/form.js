@@ -10,7 +10,27 @@ var userConfig = {
    },
    requiredFields: [
       {
+         name: "Program_Of_Interest_ID__c",
+         message: "This field is required."
+      },
+      {
+         name: "FirstName",
+         message: "This field is required."
+      },
+      {
          name: "LastName",
+         message: "This field is required."
+      },
+      {
+         name: "Email",
+         message: "This field is required."
+      },
+      {
+         name: "Phone",
+         message: "This field is required."
+      },
+      {
+         name: "Military_Relationship__c",
          message: "This field is required."
       }
    ]
