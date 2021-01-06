@@ -315,6 +315,10 @@ a:hover {
 
 @media (max-width: 768px) {
 
+    h1 {
+        font-size: 42px;
+    }
+
     .button {
         margin: 0 0 32px 0;
     }
