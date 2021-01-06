@@ -154,7 +154,7 @@ MktoForms2.whenReady(function(form) {
    fsaatSet();
 
   labels = document.getElementsByClassName('mktoLabel');
-  inputs = document.getElementsByClassName('mktoField');
+  inputs = document.getElementsByClassName('mktoTextField');
    
   for (i = 0; i < labels.length; i++) {
       label = document.getElementsByClassName('mktoLabel')[i];
@@ -165,7 +165,7 @@ MktoForms2.whenReady(function(form) {
    }
    
    for (i = 0; i < inputs.length; i++) {
-      input = document.getElementsByClassName('mktoField')[i];
+      input = document.getElementsByClassName('mktoTextField')[i];
       input.addEventListener('focusin', function() {
          boo = this.previousSibling.previousSibling;
          boo.style.opacity = '1';
