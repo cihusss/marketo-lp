@@ -323,7 +323,22 @@
             height: 42px !important; 
             border: 1px solid #a9a9a9;
             border-radius: 4px;
-            padding: 12px 6px 0 2px !important;
+            padding: 12px 6px 0 6px !important;
+            background: white;
+            background-image:
+                linear-gradient(45deg, transparent 50%, #cc0000 50%),
+                linear-gradient(135deg, #cc0000 50%, transparent 50%),
+                linear-gradient(to right, white, white);
+            background-position:
+                calc(100% - 20px) calc(1em + 4px),
+                calc(100% - 15px) calc(1em + 4px),
+                100% 0;
+            background-size:
+                5px 5px,
+                5px 5px,
+                2.5em 2.5em;
+            background-repeat: no-repeat;
+            padding: 12px 6px 0 6px !important;
         }
 
         .mktoForm fieldset {
@@ -352,12 +367,12 @@
         }
 
         .mktoButton {
-            width: 30%;
             border-radius: 4px;
             height: 32px;
             background: #cc0000 !important;
             border: none !important;
             margin: 6px 0 0 8px !important;
+            padding: 8px 24px !important;
         }
 
         .mktoButton[data-dir="prev"] {
@@ -395,7 +410,7 @@
         }
 
         input, input::placeholder, select {
-            color: gray;
+            color: #4C4C4C;
         }
 
         option:first-child { 
@@ -440,6 +455,14 @@
         /*.mktoFieldDescriptor {
             height: 64px;
         }*/
+
+        input[type=text], input[type=button], select {
+            -webkit-appearance: none;
+        }
+
+        select {
+            
+        }
 
 
         @media (max-width: 768px) {
@@ -490,9 +513,6 @@
                 height: 48px !important;
             }
 
-            select {
-                appearance: none;
-            }
         }
 
     </style>
@@ -871,9 +891,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                 </div>
                 <div class="col-1-2">
-                    <div id="k_player01">
-                        <a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
-                    </div>
+                    <div id="k-player-small"></div>
                 </div>
             </div>
 
@@ -885,7 +903,7 @@
 
             <div class="row padding-hero-large h-center">
                 <div class="col-1-1">
-                    <div id="k_player02">
+                    <div id="k-player-large">
                         <a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
                     </div>
                 </div>
@@ -943,8 +961,23 @@
         <script src="https://cihusss.github.io/marketo-lp/js/form.js"></script>
         <script>
 
-            // MktoForms2.loadForm("https://learn.bisk.com", "058-NIT-467", 4953);
             MktoForms2.loadForm("https://learn.bisk.com", "058-NIT-467", ${form-h1a-id});
+
+            kWidget.embed({
+                "targetId": "k-player-small",
+                "wid": "_2353281",
+                "uiconf_id": "45992131",
+                "flashvars": {},
+                "entry_id": "1_bi8dat82"
+                });
+
+            kWidget.embed({
+                "targetId": "k-player-large",
+                "wid": "_2353281",
+                "uiconf_id": "45992131",
+                "flashvars": {},
+                "entry_id": "1_083v7xfq"
+            });
 
         </script>
   </body>
