@@ -78,12 +78,13 @@
     <meta class="mktoBoolean" id="toggle-h3q-lg" mktoName="H3q-lg / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h3q-lg-image" mktoName="H3q-lg / Image / Display" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
 
-    <!-- Video-sm -->
+    <!-- H4q-thumb -->
+    <meta class="mktoBoolean" id="toggle-h4q-thumb" mktoName="H4q Thumb / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
 
+    <!-- Video-sm -->
     <meta class="mktoString" id="video-small-id" mktoName="Kaltura Video / Small / ID" default="1_bi8dat82">
 
     <!-- Video-lg -->
-
     <meta class="mktoString" id="video-large-id" mktoName="Kaltura Video / Large / ID" default="1_083v7xfq">
 
     <style>
@@ -277,6 +278,10 @@
 
         #h3q-lg-img {
             display: ${toggle-h3q-lg-image};
+        }
+
+        #h4q-thumb {
+            display: ${toggle-h4q-thumb};
         }
 
         /* --- multi-step form --- */
@@ -853,18 +858,20 @@
                 </div>
             </div>
 
-            <div class="row padding-hero-large h-center">
+            <!-- H4q Thumb -->
+
+            <div id="h4q-thumb" class="row padding-hero-large h-center quote-small">
                 <div class="col-2-5 padding-type-right">
-                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
-                    <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
-                    <h5>Student Name</h5>
-                    <p>Program, School,<br>Long title for this person</p>
+                    <div id="h4q-img01" class="mktoImg resimage face-thumb" mktoName="H4q / Thumb Image #1"></div>
+                    <h5 id="h4q-thumb-headline01" class="mktoText" mktoName="H4q / Headline #1">&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5 id="h4q-thumb-name01" class="mktoText" mktoName="H4q / Name #1">Student Name</h5>
+                    <p id="h4q-thumb-paragraph01" class="mktoText" mktoName="H4q / Paragraph #1">Program, School,<br>Long title for this person</p>
                 </div>
                 <div class="col-2-5 padding-type-right">
-                    <img src="https://cihusss.github.io/marketo-lp/img/face.png" class="face-thumb">
-                    <h5>&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
-                    <h5>Student Name</h5>
-                    <p>Program, School,<br>Long title for this person</p>
+                    <div id="h4q-img02" class="mktoImg resimage face-thumb" mktoName="H4q / Thumb Image #2"></div>
+                    <h5 id="h4q-thumb-headline02" class="mktoText" mktoName="H4q / Headline #2">&ldquo;The professors challenge us and guide us to dive deep when solving problems, which really allow us to practice our analytical skills and learn to appreciate the results we achieve from the critical thinking process.&rdquo;</h5>
+                    <h5 id="h4q-thumb-name02" class="mktoText" mktoName="H4q / Name #2">Student Name</h5>
+                    <p id="h4q-thumb-paragraph02" class="mktoText" mktoName="H4q / Paragraph #2">Program, School,<br>Long title for this person</p>
                 </div>
             </div>
 

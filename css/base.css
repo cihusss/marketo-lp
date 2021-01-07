@@ -243,12 +243,6 @@ a:hover {
     border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-.face-thumb {
-    width: 96px;
-    margin: 0 0 24px 0;
-    border-radius: 50%;
-}
-
 .quote .face-thumb {
     margin: -176px 0 64px 0;
     width: 120px;
@@ -260,6 +254,14 @@ a:hover {
     padding: 48px;
     border: solid 1px #CACACA;
     margin: 32px;
+}
+
+.quote-small .face-thumb {
+    width: 96px;
+    height: 96px;
+    margin: 0 0 24px 0;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* ---------- material icons ---------- */
