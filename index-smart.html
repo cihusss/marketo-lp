@@ -78,6 +78,14 @@
     <meta class="mktoBoolean" id="toggle-h3q-lg" mktoName="H3q-lg / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h3q-lg-image" mktoName="H3q-lg / Image / Display" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
 
+    <!-- Video-sm -->
+
+    <meta class="mktoString" id="video-small-id" mktoName="Kaltura Video / Small / ID" default="1_bi8dat82">
+
+    <!-- Video-lg -->
+
+    <meta class="mktoString" id="video-large-id" mktoName="Kaltura Video / Large / ID" default="1_083v7xfq">
+
     <style>
 
         /* move to grid */
@@ -887,8 +895,8 @@
 
             <div class="row padding-hero-large h-center">
                 <div class="col-1-2 padding-type-right">
-                    <h4>This is a subheading introducing the video.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <h4 id="k-video-small-headline" class="mktoText" mktoName="Kaltura Video / Headline Small">This is a subheading introducing the video.</h4>
+                    <p id="k-video-small-paragraph" class="mktoText" mktoName="Kaltura Video / Paragraph Small">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                 </div>
                 <div class="col-1-2">
                     <div id="k-player-small"></div>
@@ -903,9 +911,7 @@
 
             <div class="row padding-hero-large h-center">
                 <div class="col-1-1">
-                    <div id="k-player-large">
-                        <a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
-                    </div>
+                    <div id="k-player-large"></div>
                 </div>
             </div>
 
@@ -968,7 +974,7 @@
                 "wid": "_2353281",
                 "uiconf_id": "45992131",
                 "flashvars": {},
-                "entry_id": "1_bi8dat82"
+                "entry_id": "${video-small-id}"
                 });
 
             kWidget.embed({
@@ -976,7 +982,7 @@
                 "wid": "_2353281",
                 "uiconf_id": "45992131",
                 "flashvars": {},
-                "entry_id": "1_083v7xfq"
+                "entry_id": "${video-large-id}"
             });
 
         </script>

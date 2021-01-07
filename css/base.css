@@ -246,6 +246,7 @@ a:hover {
 .face-thumb {
     width: 96px;
     margin: 0 0 24px 0;
+    border-radius: 50%;
 }
 
 .quote .face-thumb {
@@ -253,7 +254,6 @@ a:hover {
     width: 120px;
     height: 120px;
     overflow: hidden;
-    border-radius: 50%;
 }
 
 .quote-stroke {
