@@ -297,13 +297,13 @@ a:hover {
     background-image: url(https://images.unsplash.com/photo-1505318591007-2e8a3edd6042?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2214&q=80);
 }*/
 
-#k_player01, #k_player02 {
+#k-player-small, #k-player-large {
     position: relative;
     padding-bottom: 56.25%;
     /*padding-bottom: 75%;*/
     height: 0;
 }
-#k_player01 iframe, #k_player02 iframe {
+#k-player-small iframe, #k-player-large iframe {
     position: absolute;
     top: 0;
     left: 0;
