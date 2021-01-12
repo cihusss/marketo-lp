@@ -30,7 +30,7 @@ var userConfig = {
          message: "This field is required."
       },
       {
-         name: "Military_Relationship__c1",
+         name: "Military_Relationship__c",
          message: "This field is required."
       }
    ]
