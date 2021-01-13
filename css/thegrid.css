@@ -121,7 +121,7 @@ a img { border: 0; outline: none; }
     .padding-type-left, .padding-type-left-small { padding-left: 0; }
     .padding-hero-large { padding: 32px; }
     .padding-hero-medium { padding: 16px 32px; }
-    .padding-hero-small { padding: 8px 42px; }
+    .padding-hero-small { padding: 0 32px; }
     .padding-icons { padding: 16px 4px; }
     .padding-icons-top { padding: 16px 0; }
     .margin-form-negative { margin-top: 0; }

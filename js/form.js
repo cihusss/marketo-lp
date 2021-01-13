@@ -184,7 +184,7 @@ MktoForms2.whenReady(function(form) {
       input.setAttribute('placeholder', name);
    }
    
-   for (i = 0; i < inputs.length; i++) {
+  for (i = 0; i < inputs.length; i++) {
       input = document.getElementsByClassName('mktoField')[i];
       input.addEventListener('focusin', function() {
          boo = this.previousSibling.previousSibling;
@@ -202,5 +202,4 @@ MktoForms2.whenReady(function(form) {
          }
       });
    }
-
 });
