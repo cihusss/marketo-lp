@@ -8,12 +8,19 @@ a img { border: 0; outline: none; }
 
 /* ---------- the grid ---------- */
 
-.width-lock { max-width: 1280px; margin: 0 auto 0 auto; }
+.width-lock {
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 .grid {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 .grid:after {content: "";display: table;clear: both;}
 .row {
     display: flex;

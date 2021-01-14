@@ -673,6 +673,10 @@
                 margin-top: 12px;
             }
 
+            .footer {
+                padding: 48px 48px 24px 48px;
+            }
+
             #h2e i {
                 padding-right: 16px;
             }
@@ -697,6 +701,11 @@
                 margin-top: -16px !important;
                 height: 42px !important;
                 font-size: 18px !important;
+                transition: color .3s ease-in-out;
+            }
+
+            .mktoButton:hover {
+                opacity: 0.8;
             }
 
             .mktoForm {
@@ -755,17 +764,19 @@
             <!-- H1a -->
             
             <div id="h1a" class="row padding-hero-large">
-                <div id="h1a-full-width" class="col-3-5 no-col-padding">
-                    <h1 id="h1a-headline" class="mktoText padding-type-right" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
-                    <h3 id="h1a-subhead" class="mktoText padding-type-right" mktoName="H1a / Subhead">100% Online Degrees.</h3>
-                    <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
-                </div>
-                <div id="h1a-form-wrap" class="col-2-5 col-flex">
-                    <div id="h1a-form-h2" class="mktoText" mktoName="H2a / Form / Intro">Classes Start Soon</div>
-                    <div id="h1a-form-h1" class="mktoText" mktoName="H2a / Form / Headline">Get Started Today!</div>
-                    <div id="h1a-form-p" class="mktoText" mktoName="H2a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
-                    <form id="mktoForm_${form-h1a-id}"></form>
-                    <div id="h1a-form-disc" class="mktoText" mktoName="H2a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
+                <div id="width-lock">
+                    <div id="h1a-full-width" class="col-3-5 no-col-padding">
+                        <h1 id="h1a-headline" class="mktoText padding-type-right" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
+                        <h3 id="h1a-subhead" class="mktoText padding-type-right" mktoName="H1a / Subhead">100% Online Degrees.</h3>
+                        <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
+                    </div>
+                    <div id="h1a-form-wrap" class="col-2-5 col-flex">
+                        <div id="h1a-form-h2" class="mktoText" mktoName="H2a / Form / Intro">Classes Start Soon</div>
+                        <div id="h1a-form-h1" class="mktoText" mktoName="H2a / Form / Headline">Get Started Today!</div>
+                        <div id="h1a-form-p" class="mktoText" mktoName="H2a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
+                        <form id="mktoForm_${form-h1a-id}"></form>
+                        <div id="h1a-form-disc" class="mktoText" mktoName="H2a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
+                    </div>
                 </div>
                 <div id="h1a-overlay"></div>
             </div>
