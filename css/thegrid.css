@@ -125,8 +125,8 @@ a img { border: 0; outline: none; }
         margin: 0;
     }
 
-    .padding-type-right, .padding-type-right-small { padding-right: 0; }
-    .padding-type-left, .padding-type-left-small { padding-left: 0; }
+    .padding-type-right, .padding-type-right-small { padding-right: 0 !important; }
+    .padding-type-left, .padding-type-left-small { padding-left: 0 !important; }
     .padding-hero-large { padding: 32px; }
     .padding-hero-medium { padding: 16px 32px; }
     .padding-hero-small { padding: 0 32px; }
