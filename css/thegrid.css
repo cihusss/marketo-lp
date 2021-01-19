@@ -78,8 +78,8 @@ a img { border: 0; outline: none; }
 .col-4-5 { width: 80%; }
 .col-45-5 { width: 90%; }
 
-.padding-type-right { padding-right: 64px; }
-.padding-type-left { padding-left: 64px; }
+.padding-type-right { padding-right: 64px !important; }
+.padding-type-left { padding-left: 64px !important; }
 .padding-type-right-small { padding-right: 32px; }
 .padding-type-left-small { padding-left: 32px; }
 .padding-type-top-small { padding-top: 32px; }
