@@ -23,7 +23,7 @@
     <meta class="mktoColor" id="color-h1a-form" mktoName="H1a / Form / Background Color" default="#f7f7f7">
     <meta class="mktoColor" id="color-h1a-form-font" mktoName="H1a / Form / Font Color" default="#333333">
     <meta class="mktoString" id="formshift-h1a" mktoName="H1a / Form Shift" default="0px">
-    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="false" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
+    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="true" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
     <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
     <meta class="mktoString" id="overlay-h1a" mktoName="H1a / Overlay" default="0%">
     <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#f2f2f2">
@@ -406,6 +406,10 @@
             display: ${toggle-h4q-thumb};
         }
 
+        #h4q-thumb p {
+            margin: 0;
+        }
+
          #h4q {
             display: ${toggle-h4q};
         }
@@ -420,6 +424,7 @@
 
         #color-strap-cta-headline {
             color: ${color-colorstrap-headline};
+            text-align: left;
         }
 
         #color-strap-cta-button {
@@ -1185,11 +1190,13 @@
             <!-- ColorStrap CTA -->
 
             <div class="row padding-hero-medium h-center color-strap-cta">
-                <div class="col-1-2 col-flex col-retain">
-                    <h4 id="color-strap-cta-headline" class="centertext mktoText" mktoName="ColorStrap CTA / Headline">Prepare yourself to meet any challenge and drive success</h4>
-                </div>
-                <div class="col-1-2 padding-type-left col-flex col-retain">
-                    <a href="${color-colorstrap-button-href}" id="color-strap-cta-button" class="button button-wide" mktoName="ColorStrap CTA / Button" >Get More Info</a>
+                <div class="width-lock">
+                    <div class="col-1-2 col-flex col-retain no-col-padding">
+                        <h4 id="color-strap-cta-headline" class="centertext mktoText" mktoName="ColorStrap CTA / Headline">Prepare yourself to meet any challenge and drive success</h4>
+                    </div>
+                    <div class="col-1-2 padding-type-left col-flex col-retain">
+                        <a href="${color-colorstrap-button-href}" id="color-strap-cta-button" class="button button-wide" mktoName="ColorStrap CTA / Button" >Get More Info</a>
+                    </div>
                 </div>
             </div>
 
