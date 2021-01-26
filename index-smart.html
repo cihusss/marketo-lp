@@ -7,6 +7,7 @@
     <!-- Navbar -->
 
     <meta class="mktoBoolean" id="toggle-navbar" mktoName="Navbar / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-navbar-links" mktoName="Navbar / Links / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoString" id="navbar-logo" mktoName="Navbar / Logo Image URL" default="https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/2018/10/15031041/Bisk-Logo-Full-Color.svg">
     <meta class="mktoString" id="navbar-logo-margins" mktoName="Navbar / Logo Margins" default="0 0 0 0">
     <meta class="mktoString" id="navbar-logo-width" mktoName="Navbar / Logo Width" default="100px">
@@ -34,13 +35,23 @@
     <meta class="mktoString" id="form-h1a-id" mktoName="H1a / Form / ID" default="4989">
     <meta class="mktoColor" id="color-mktoButton" mktoName="H1a / Form Button Color" default="#4c4c4c">
 
+    <!-- Color Strap Top-->
+    <meta class="mktoBoolean" id="toggle-colorstrap-top" mktoName="ColorStrap Top / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoColor" id="colorstrap-top-background" mktoName="ColorStrap Top / Background Color" default="#333333">
+    <meta class="mktoColor" id="colorstrap-top-foreground" mktoName="ColorStrap Top / Foreground Color" default="#ffffff">
+
     <!-- Color Strap -->
+    <meta class="mktoBoolean" id="toggle-colorstrap" mktoName="ColorStrap / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoColor" id="colorstrap-background" mktoName="ColorStrap / Background Color" default="#333333">
     <meta class="mktoColor" id="colorstrap-foreground" mktoName="ColorStrap / Foreground Color" default="#ffffff">
 
     <!-- H2a -->
+    <meta class="mktoBoolean" id="toggle-h2a-2col" mktoName="H2a / 2-col / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+
+    <!-- H2a -->
     <meta class="mktoBoolean" id="toggle-h2a" mktoName="H2a / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h2a-form" mktoName="H2a / Form / Display" default="false" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="toggle-h2a-headline" mktoName="H2a / Headline / Display" default="false" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-form-h1" mktoName="H2a / Form Headline / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-form-h2" mktoName="H2a / Form Intro / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-form-paragraph" mktoName="H2a / Form Paragaraph / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -121,6 +132,7 @@
     <meta class="mktoColor" id="color-colorstrap-button" mktoName="ColorStrap CTA / Button Color" default="#555555">
     <meta class="mktoColor" id="color-colorstrap-button-foreground" mktoName="ColorStrap CTA / Button Foreground Color" default="#ffffff">
     <meta class="mktoString" id="color-colorstrap-button-href" mktoName="ColorStrap CTA / Button Link" default="https://www.bisk.com">
+    <meta class="mktoString" id="img-bg-colorstrap-cta" mktoName="ColorStrap CTA / Background Image" default="">
 
     <!-- Footer -->
     <meta class="mktoBoolean" id="toggle-footer" mktoName="Footer / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -142,6 +154,13 @@
         .top-stick { align-items: flex-start !important; }
         .row { justify-content: center; }
         .change-direction { flex-direction: column !important; align-items: flex-start !important; }
+        .two-cols { column-count: 2; column-gap: 64px; }
+        .two-cols p { margin: 0; }
+
+        .quote-small .face-thumb {
+            height: auto !important; 
+            border-radius: 0 !important; 
+        }
 
         /* move to base */
 
@@ -160,7 +179,6 @@
         }
 
         .color-strap {
-            min-height: 220px;
             background-color: ${colorstrap-background};
         }
 
@@ -187,6 +205,27 @@
         .color-strap-cta p, .color-strap ul {
             color: ${colorstrap-cta-foreground} !important;
             margin: 0;
+        }
+
+        #color-strap {
+            display: ${toggle-colorstrap};
+            min-height: 220px;
+        }
+
+        #color-strap-top {
+            display: ${toggle-colorstrap-top};
+            background-color: ${colorstrap-top-background};
+            padding: 16px 128px;
+        }
+
+        #color-strap-top h5 {
+            color: ${colorstrap-top-foreground};
+            margin: 0;
+            align-self: center;
+        }
+
+        #links {
+            display: ${toggle-navbar-links} !important;
         }
 
         #h1a {
@@ -225,7 +264,6 @@
             display: ${toggle-h1a-form-wrap};
             margin-top: ${formshift-h1a};
             background: ${color-h1a-form};
-            color: ${color-h1a-form-font};
             z-index: 12;
             /*align-items: flex-end;*/
             flex-direction: column;
@@ -244,6 +282,10 @@
             z-index: 10;
         }
 
+        #h2a-2col {
+            display: ${toggle-h2a-2col};
+        }
+
         #h2a {
             display: ${toggle-h2a};
             z-index: 11;
@@ -259,9 +301,14 @@
             color: ${color-h2a-form-font};
         }
 
+        #h2a-headline {
+            display: ${toggle-h2a-headline};
+        }
+
         #h1a-form-h1, #h2a-form-h1 {
             display: ${toggle-form-h1};
             font-size: 32px;
+            color: ${color-h1a-form-font};
         }
 
         #h1a-form-h2, #h2a-form-h2 {
@@ -277,6 +324,7 @@
         #h1a-form-disc, #h2a-form-disc {
             display: ${toggle-form-disc};
             font-size: 9px;
+            flex-direction: column;
         }
 
         #h2a-img {
@@ -334,6 +382,7 @@
         #block {
             display: ${toggle-block};
             background: ${background-block};
+            color: ${foreground-block}
         }
 
         #block h4, #block p, #block ul {
@@ -420,6 +469,12 @@
 
         #video-large {
             display: ${toggle-video-large};
+        }
+
+        #color-strap-cta {
+            background-image: url(${img-bg-colorstrap-cta});
+            background-size: cover;
+            background-position: center center;
         }
 
         #color-strap-cta-headline {
@@ -653,6 +708,8 @@
 
         @media (max-width: 768px) {
             
+            .two-cols { column-count: 1; }
+
             #h1a {
                 max-height: none !important;
             }
@@ -763,9 +820,17 @@
         </div>
         <div class="grid">
             
-            <div class="row h-center">
+            <!-- <div class="row h-center">
                 <div class="col-45-5">
                     <hr id="navbarline">
+                </div>
+            </div> -->
+
+            <!-- Color Strap Top -->
+
+            <div id="color-strap-top" class="row color-strap">
+                <div class="col-1-1 no-col-padding width-lock change-direction">
+                    <h5 id="colorstrap-top-headline" class="mktoText" mktoName="ColorStrap Top / Headline">Headline</h3>
                 </div>
             </div>
 
@@ -779,11 +844,11 @@
                         <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
                     </div>
                     <div id="h1a-form-wrap" class="col-2-5 col-flex">
-                        <div id="h1a-form-h2" class="mktoText" mktoName="H2a / Form / Intro">Classes Start Soon</div>
-                        <div id="h1a-form-h1" class="mktoText" mktoName="H2a / Form / Headline">Get Started Today!</div>
-                        <div id="h1a-form-p" class="mktoText" mktoName="H2a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
+                        <div id="h1a-form-h2" class="mktoText" mktoName="H1a / Form / Intro">Classes Start Soon</div>
+                        <div id="h1a-form-h1" class="mktoText" mktoName="H1a / Form / Headline">Get Started Today!</div>
+                        <div id="h1a-form-p" class="mktoText" mktoName="H1a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
                         <form id="mktoForm_${form-h1a-id}"></form>
-                        <div id="h1a-form-disc" class="mktoText" mktoName="H2a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
+                        <div id="h1a-form-disc" class="mktoText" mktoName="H1a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
                     </div>
                 </div>
                 <div id="h1a-overlay"></div>
@@ -791,10 +856,23 @@
 
             <!-- Color Strap -->
 
-            <div class="row color-strap padding-hero-medium">
-                    <div class="col-1-1 no-col-padding width-lock change-direction">
-                        <h3 id="colorstrap-headline" class="mktoText" mktoName="ColorStrap / Headline">Headline</h3>
-                        <p id="colorstrap-paragraph" class="mktoText" mktoName="ColorStrap / Paragraph">Something here</p>
+            <div id="color-strap"class="row color-strap padding-hero-medium">
+                <div class="col-1-1 no-col-padding width-lock change-direction">
+                    <h3 id="colorstrap-headline" class="mktoText" mktoName="ColorStrap / Headline">Headline</h3>
+                    <p id="colorstrap-paragraph" class="mktoText" mktoName="ColorStrap / Paragraph">Something here</p>
+                </div>
+            </div>
+
+            <!-- H2a-2col -->
+
+            <div id="h2a-2col" class="row padding-hero-medium">
+                <div class="width-lock change-direction">
+                    <div class="col-3-5 no-col-padding padding-type-right">
+                        <h4 id="h2a-2col-headline" class="mktoText" mktoName="H2a / 2-col / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
+                    </div>
+                    <div class="col-2-5"></div>
+                    <div class="col-1-1 no-col-padding padding-type-right two-cols">
+                        <p id="h2a-2col-paragraph" class="mktoText" mktoName="H2a / 2-col / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                     </div>
                 </div>
             </div>
@@ -865,9 +943,13 @@
             <!-- Block -->
 
             <div id="block" class="row bg-light-gray padding-hero-large h-center">
-                <div id="block-inner" class="col-1-1 padding-hero-small width-lock change-direction">
-                    <h4 id="block-headline" class="fg-white mktoText" mktoName="Block / Headline">This is a subheading introducing the content below.</h4>
-                    <p id="block-paragraph" class="fg-white mktoText" mktoName="Block / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                <div id="block-inner" class="width-lock">
+                    <div class="col-1-2 no-col-padding padding-type-right">
+                        <h4 id="block-headline" class="mktoText" mktoName="Block / Headline">This is a subheading introducing the content below.</h4>
+                    </div>
+                    <div class="col-1-2 no-col-padding">
+                         <p id="block-paragraph" class="mktoText" mktoName="Block / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                    </div>
                 </div>
             </div>
 
@@ -1189,12 +1271,12 @@
 
             <!-- ColorStrap CTA -->
 
-            <div class="row padding-hero-medium h-center color-strap-cta">
-                <div class="width-lock">
-                    <div class="col-1-2 col-flex col-retain no-col-padding">
+            <div id="color-strap-cta" class="row padding-hero-medium h-center color-strap-cta">
+                <div class="width-lock change-direction">
+                    <div class="col-1-1 col-flex col-retain no-col-padding">
                         <h4 id="color-strap-cta-headline" class="centertext mktoText" mktoName="ColorStrap CTA / Headline">Prepare yourself to meet any challenge and drive success</h4>
                     </div>
-                    <div class="col-1-2 padding-type-left col-flex col-retain">
+                    <div class="col-1-1 col-flex col-retain">
                         <a href="${color-colorstrap-button-href}" id="color-strap-cta-button" class="button button-wide" mktoName="ColorStrap CTA / Button" >Get More Info</a>
                     </div>
                 </div>
@@ -1232,6 +1314,27 @@
                 "uiconf_id": "45992131",
                 "flashvars": {},
                 "entry_id": "${video-large-id}"
+            });
+
+            MktoForms2.whenRendered(function(form) {
+              var formEl = form.getFormElem()[0],
+                  arrayify = getSelection.call.bind([].slice);
+
+              arrayify(formEl.querySelectorAll('SELECT'))
+                .forEach(function(selectEl) {
+                    var currentOg;
+                    arrayify(selectEl.querySelectorAll('OPTION'))
+                        .forEach(function(o, idx) {
+                          if (o.value == '[OPTGROUP]') {
+                            currentOg = document.createElement('OPTGROUP');
+                            currentOg.label = o.textContent;
+                            selectEl.appendChild(currentOg);
+                            selectEl.removeChild(o);
+                          } else {
+                            if (currentOg) currentOg.appendChild(o);
+                      }
+                    });
+                });
             });
 
         </script>

@@ -97,6 +97,10 @@ a img { border: 0; outline: none; }
 
 @media (max-width: 768px) {
 
+    .width-lock {
+        flex-direction: column;
+    }
+
     .row {
         flex-direction: column;
         -webkit-flex-direction: column;
