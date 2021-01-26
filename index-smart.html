@@ -394,6 +394,12 @@
             background: ${background-block-inner};
         }
 
+        #block-disclaimer {
+            font-size: 11px;
+            color: ${foreground-block};
+            width: 60%;
+        }
+
         #h2c {
             display: ${toggle-h2c};
         }
@@ -710,12 +716,18 @@
             
             .two-cols { column-count: 1; }
 
+            #h4q-thumb [class*='col-']:nth-child(2) {
+                margin-top: 42px;
+            }
+
             #h1a {
                 max-height: none !important;
             }
 
             #h1a-form-wrap {
                 margin-top: 0 !important;
+                max-width: none;
+
             }
 
             #h1a-full-width {
@@ -732,6 +744,10 @@
 
             .color-strap h3 {
                 margin-top: 16px;
+            }
+
+            #color-strap-top {
+                padding: 16px 42px;
             }
 
             .color-strap-cta h4 {
@@ -756,6 +772,10 @@
 
             #h2f .col-1-3:last-child {
                 padding: 0;
+            }
+
+            #block-disclaimer {
+                width: 100%;
             }
 
             .mktoFormRow { 
@@ -871,7 +891,7 @@
                         <h4 id="h2a-2col-headline" class="mktoText" mktoName="H2a / 2-col / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
                     </div>
                     <div class="col-2-5"></div>
-                    <div class="col-1-1 no-col-padding padding-type-right two-cols">
+                    <div class="col-1-1 no-col-padding two-cols">
                         <p id="h2a-2col-paragraph" class="mktoText" mktoName="H2a / 2-col / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                     </div>
                 </div>
@@ -946,12 +966,13 @@
                 <div id="block-inner" class="width-lock">
                     <div class="col-1-2 no-col-padding padding-type-right">
                         <h4 id="block-headline" class="mktoText" mktoName="Block / Headline">This is a subheading introducing the content below.</h4>
+                        <p id="block-disclaimer" class="disc mktoText" mktoName="Block / Disclaimer">Based on a Florida Tech Office of Enrollment Management review of all financial aid applications, Fall 2020.</p>
                     </div>
                     <div class="col-1-2 no-col-padding">
                          <p id="block-paragraph" class="mktoText" mktoName="Block / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                     </div>
                 </div>
-            </div>
+              </div>
 
             <!-- H2c -->
 
