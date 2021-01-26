@@ -330,6 +330,10 @@ ul {
         font-size: 42px;
     }
 
+    h3 {
+        margin: 32px 0 32px 0;
+    }
+
     #navbar {
         padding: 20px 32px;
     }
