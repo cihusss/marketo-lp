@@ -656,6 +656,10 @@
             opacity: 0;
         }
 
+        .mktoHtmlText {
+            width: 100% !important;
+        }
+
         input, input::placeholder, select {
             color: #4C4C4C;
         }
@@ -782,6 +786,10 @@
                 margin: 0 0 16px 0 !important;
             }
 
+            .mktoFormRow input[type="hidden"] {
+                display: none;
+            }
+
             .mktoButton {
                 margin-top: -16px !important;
                 height: 42px !important;
@@ -791,6 +799,11 @@
 
             .mktoButton:hover {
                 opacity: 0.8;
+            }
+
+            .mktoButton[data-dir="prev"] {
+                background: #4e4d4d !important;
+                margin: -16px 16px 0 0 !important;
             }
 
             .mktoForm {
@@ -1338,24 +1351,36 @@
             });
 
             MktoForms2.whenRendered(function(form) {
-              var formEl = form.getFormElem()[0],
-                  arrayify = getSelection.call.bind([].slice);
+                var formEl = form.getFormElem()[0],
+                
+                arrayify = getSelection.call.bind([].slice);
 
-              arrayify(formEl.querySelectorAll('SELECT'))
+                arrayify(formEl.querySelectorAll('SELECT'))
                 .forEach(function(selectEl) {
                     var currentOg;
                     arrayify(selectEl.querySelectorAll('OPTION'))
                         .forEach(function(o, idx) {
-                          if (o.value == '[OPTGROUP]') {
-                            currentOg = document.createElement('OPTGROUP');
-                            currentOg.label = o.textContent;
-                            selectEl.appendChild(currentOg);
-                            selectEl.removeChild(o);
-                          } else {
-                            if (currentOg) currentOg.appendChild(o);
-                      }
+                            if (o.value == '[OPTGROUP]') {
+                                currentOg = document.createElement('OPTGROUP');
+                                currentOg.label = o.textContent;
+                                selectEl.appendChild(currentOg);
+                                selectEl.removeChild(o);
+                            } else {
+                                if (currentOg) currentOg.appendChild(o);
+                        }
                     });
                 });
+
+                console.log("boom");
+
+                hiddenEls = formEl.querySelectorAll('.mktoFormRow input[type="hidden"]');
+  
+                console.log(hiddenEls);
+                
+                for(var i = 0; i < hiddenEls.length; i++) {
+                    // console.log(hiddenEls[i].parentNode);
+                    hiddenEls[i].parentNode.style.display = "none";
+                }
             });
 
         </script>
