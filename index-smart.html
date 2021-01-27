@@ -21,11 +21,13 @@
     <meta class="mktoBoolean" id="toggle-h1a-subhead" mktoName="H1a / Subhead / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h1a-button" mktoName="H1a / Button / Display" default="true" true_value="inline-block" false_value="none" false_value_name="Hide" true_value_name="Show">
     <meta class="mktoBoolean" id="toggle-h1a-form-wrap" mktoName="H1a / Form / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show"> 
+    <meta class="mktoBoolean" id="toggle-h1a-herologo" mktoName="H1a / Hero Logo / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show"> 
     <meta class="mktoColor" id="color-h1a-form" mktoName="H1a / Form / Background Color" default="#f7f7f7">
     <meta class="mktoColor" id="color-h1a-form-font" mktoName="H1a / Form / Font Color" default="#333333">
     <meta class="mktoString" id="formshift-h1a" mktoName="H1a / Form Shift" default="0px">
     <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="true" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
     <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
+    <meta class="mktoString" id="img-herologo-h1a" mktoName="Hero Logo / Background Image" default="">
     <meta class="mktoString" id="overlay-h1a" mktoName="H1a / Overlay" default="0%">
     <meta class="mktoColor" id="color-h1a" mktoName="H1a / Background Color" default="#f2f2f2">
     <meta class="mktoColor" id="color-h1a-headline" mktoName="H1a / Headline Color" default="#4c4c4c">
@@ -178,6 +180,13 @@
             margin: ${navbar-logo-margins} !important;
         }
 
+     #herologo {
+        width: 160px;
+        margin: -90px 0 40px 0;
+        align-self: center;
+        display: ${toggle-h1a-herologo};
+    }
+
         .color-strap {
             background-color: ${colorstrap-background};
         }
@@ -325,6 +334,7 @@
             display: ${toggle-form-disc};
             font-size: 9px;
             flex-direction: column;
+            opacity: .5;
         }
 
         #h2a-img {
@@ -718,7 +728,12 @@
 
         @media (max-width: 768px) {
             
+            h1 { font-size: 32px !important; }
+            h3 { font-size: 24px !important; }
+
             .two-cols { column-count: 1; }
+
+            #herologo { display: none; }
 
             #h4q-thumb [class*='col-']:nth-child(2) {
                 margin-top: 42px;
@@ -822,6 +837,12 @@
 
         }
 
+        @media (max-width: 1200px) {
+
+            h1 { font-size: 42px !important; }
+            #h1a-form-h1, #h2a-form-h1 { font-size: 24px; }
+        }
+
     </style>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -877,6 +898,7 @@
                         <a href="${href-h1a-url}" id="h1a-button" class="button mktoText" mktoName="H1a / Button Label">Button</a>
                     </div>
                     <div id="h1a-form-wrap" class="col-2-5 col-flex">
+                        <img id="herologo" src="${img-herologo-h1a}">
                         <div id="h1a-form-h2" class="mktoText" mktoName="H1a / Form / Intro">Classes Start Soon</div>
                         <div id="h1a-form-h1" class="mktoText" mktoName="H1a / Form / Headline">Get Started Today!</div>
                         <div id="h1a-form-p" class="mktoText" mktoName="H1a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
