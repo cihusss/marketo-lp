@@ -80,8 +80,8 @@ a img { border: 0; outline: none; }
 
 .padding-type-right { padding-right: 64px !important; }
 .padding-type-left { padding-left: 64px !important; }
-.padding-type-right-small { padding-right: 32px; }
-.padding-type-left-small { padding-left: 32px; }
+.padding-type-right-small { padding-right: 32px !important; }
+.padding-type-left-small { padding-left: 32px !important; }
 .padding-type-top-small { padding-top: 32px; }
 .padding-type-bottom-small { padding-bottom: 32px; }
 .padding-hero-large { padding: 80px 128px; }
