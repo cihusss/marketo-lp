@@ -195,8 +195,7 @@ MktoForms2.whenReady(function(form) {
         boo = this.previousSibling.previousSibling;
         boo.style.opacity = '1';
         placeholder = this.setAttribute('placeholder', '');
-        input.style.marginTop = "2px !important;"
-
+        input.setAttribute('style', 'padding: 12px 6px 0 6px !important');
       });
       input.addEventListener('focusout', function() {
         boo = this.previousSibling.previousSibling;
@@ -207,6 +206,7 @@ MktoForms2.whenReady(function(form) {
         else {
           boo.style.opacity = '1';
         }
+        input.setAttribute('style', 'padding: 22px 6px 0 6px !important');
       });
   }
 
@@ -237,11 +237,11 @@ MktoForms2.whenReady(function(form) {
   lala.forEach(element => {
       element.addEventListener('focusin', function() {
          console.log('focusIn');
-         element.setAttribute('style', 'padding: 12px 6px 0 6px !important');
+         // element.setAttribute('style', 'padding: 12px 6px 0 6px !important');
       });
       element.addEventListener('focusout', function() {
          console.log('focusOut');
-         element.setAttribute('style', 'padding: 2px 6px 0 6px !important');
+         // element.setAttribute('style', 'padding: 2px 6px 0 6px !important');
       });
    });
 
