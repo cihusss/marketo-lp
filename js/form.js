@@ -192,22 +192,23 @@ MktoForms2.whenReady(function(form) {
   for (i = 0; i < inputs.length; i++) {
       input = document.getElementsByClassName('mktoField')[i];
       input.addEventListener('focusin', function() {
-         boo = this.previousSibling.previousSibling;
-         boo.style.opacity = '1';
-         placeholder = this.setAttribute('placeholder', '');
-         input.style.marginTop = "2px !important;"
+        input.style.backgroundColor = "#cc0000";
+        boo = this.previousSibling.previousSibling;
+        boo.style.opacity = '1';
+        placeholder = this.setAttribute('placeholder', '');
+        input.style.marginTop = "2px !important;"
 
       });
       input.addEventListener('focusout', function() {
-         boo = this.previousSibling.previousSibling;
-         placeholder = this.setAttribute('placeholder', boo.innerHTML.split("</div>").pop());
-         if(this.value == "") {
-            boo.style.opacity = '0';
-         }
-         else {
-            boo.style.opacity = '1';
-         }
-         input.style.marginTop = "12px !important;"
+        input.style.backgroundColor = "#ffffff";
+        boo = this.previousSibling.previousSibling;
+        placeholder = this.setAttribute('placeholder', boo.innerHTML.split("</div>").pop());
+        if(this.value == "") {
+          boo.style.opacity = '0';
+        }
+        else {
+          boo.style.opacity = '1';
+        }
       });
   }
 
