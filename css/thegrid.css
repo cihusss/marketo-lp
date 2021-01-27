@@ -67,6 +67,10 @@ a img { border: 0; outline: none; }
     align-items: center;
 }
 
+.flex-start {
+    align-items: flex-start
+}
+
 .col-1-1, .col-2-2, .col-3-3, .col-4-4, .col-5-5 { width: 100%; }
 .col-1-2 {width: 50%;}
 .col-1-3 { width: 33.33%; }
