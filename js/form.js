@@ -206,7 +206,7 @@ MktoForms2.whenReady(function(form) {
         else {
           boo.style.opacity = '1';
         }
-        this.setAttribute('style', 'padding: 22px 6px 0 6px !important');
+        this.setAttribute('style', 'padding: 2px 6px 0 6px !important');
       });
   }
 
