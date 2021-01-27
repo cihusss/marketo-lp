@@ -237,11 +237,11 @@ MktoForms2.whenReady(function(form) {
   lala.forEach(element => {
       element.addEventListener('focusin', function() {
          console.log('focusIn');
-         element.style.padding = '20px';
+         element.style.paddingTop = '12px !important';
       });
       element.addEventListener('focusout', function() {
          console.log('focusOut');
-         element.style.padding = '0px';
+         element.style.padding = '2px !important';
       });
    });
 
