@@ -195,7 +195,7 @@ MktoForms2.whenReady(function(form) {
         boo = this.previousSibling.previousSibling;
         boo.style.opacity = '1';
         placeholder = this.setAttribute('placeholder', '');
-        input.setAttribute('style', 'padding: 12px 6px 0 6px !important');
+        this.setAttribute('style', 'padding: 12px 6px 0 6px !important');
       });
       input.addEventListener('focusout', function() {
         boo = this.previousSibling.previousSibling;
@@ -206,7 +206,7 @@ MktoForms2.whenReady(function(form) {
         else {
           boo.style.opacity = '1';
         }
-        input.setAttribute('style', 'padding: 22px 6px 0 6px !important');
+        this.setAttribute('style', 'padding: 22px 6px 0 6px !important');
       });
   }
 
