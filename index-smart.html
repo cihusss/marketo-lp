@@ -149,6 +149,7 @@
 
         /* move to grid */
 
+        html { scroll-behavior: smooth; }
         [class*='col-'] { padding: 0 32px; }
         .no-col-padding { padding: 0 !important; }
         .padding-hero-large { padding: 128px 96px; }
@@ -578,7 +579,6 @@
             height: 42px !important; 
             border: 1px solid #a9a9a9;
             border-radius: 4px;
-            padding: 12px 6px 0 6px !important;
             background: white;
             background-image:
                 linear-gradient(45deg, transparent 50%, #770000 50%),
@@ -730,6 +730,10 @@
             
             h1 { font-size: 32px !important; }
             h3 { font-size: 24px !important; }
+
+            #h2a-2col .col-1-2:first-child {
+                margin: 0 0 -24px 0;
+            }
 
             .two-cols { column-count: 1; }
 
@@ -926,10 +930,10 @@
                         <h4 id="h2a-2col-headline" class="mktoText" mktoName="H2a / 2-col / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
                     </div>
                     <div class="col-2-5"></div>
-                    <div class="col-1-1 no-col-padding two-cols">
+                    <!-- <div class="col-1-1 no-col-padding two-cols">
                         <p id="h2a-2col-paragraph" class="mktoText" mktoName="H2a / 2-col / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
-                    </div>
-                    <div class="width-lock">
+                    </div> -->
+                    <div class="width-lock flex-start">
                     <div class="col-1-2 no-col-padding padding-type-right-small">
                         <p id="h2a-col1" class="mktoText" mktoName="H2a / Column 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                     </div>
@@ -1401,16 +1405,21 @@
                     });
                 });
 
-                console.log("boom");
-
-                hiddenEls = formEl.querySelectorAll('.mktoFormRow input[type="hidden"]');
-  
-                console.log(hiddenEls);
-                
+                hiddenEls = formEl.querySelectorAll('.mktoFormRow input[type="hidden"]');                
                 for(var i = 0; i < hiddenEls.length; i++) {
-                    // console.log(hiddenEls[i].parentNode);
                     hiddenEls[i].parentNode.style.display = "none";
                 }
+
+                optionEls = formEl.querySelectorAll('OPTION'),
+                disabledTag = /^\[DISABLED\]\s/,
+                _forEach = Array.prototype.forEach;
+                _forEach.call(optionEls,function(opt){
+                    if (disabledTag.test(opt.textContent)) {
+                            opt.textContent = opt.textContent.replace(disabledTag,'');
+                          opt.disabled = true;
+                    } 
+                });
+
             });
 
         </script>

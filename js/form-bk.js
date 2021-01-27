@@ -32,10 +32,6 @@ var userConfig = {
       {
          name: "Military_Relationship__c",
          message: "This field is required."
-      },
-      {
-         name: "Country_of_Citizenship__c",
-         message: "This field is required."
       }
    ]
 };
@@ -179,7 +175,6 @@ MktoForms2.whenReady(function(form) {
 
   labels = document.getElementsByClassName('mktoLabel');
   inputs = document.getElementsByClassName('mktoField');
-  inputValues = [];
    
   for (i = 0; i < labels.length; i++) {
       label = document.getElementsByClassName('mktoLabel')[i];
@@ -195,8 +190,6 @@ MktoForms2.whenReady(function(form) {
          boo = this.previousSibling.previousSibling;
          boo.style.opacity = '1';
          placeholder = this.setAttribute('placeholder', '');
-         input.style.marginTop = "2px !important;"
-
       });
       input.addEventListener('focusout', function() {
          boo = this.previousSibling.previousSibling;
@@ -207,31 +200,6 @@ MktoForms2.whenReady(function(form) {
          else {
             boo.style.opacity = '1';
          }
-         input.style.marginTop = "12px !important;"
       });
-  }
-
-  console.log(inputs[0].value);
-
-  // const arr = [null, null, null];
-  // console.log(arr.every(element => element === null));
-
-  btnSubmit = document.querySelector('button[type="submit"]');
-  btnSubmit.addEventListener('click', function() {
-    for (i = 0; i < inputs.length; i++) {
-      inputVal = document.getElementsByClassName('mktoField')[i].value;
-      console.log(inputVal);
-      inputValues.push(inputVal);
-    }
-    // console.log(inputValues);
-    if (inputValues.includes('')) {
-      console.log('one of the values is empty');
-    }
-    else {
-      btnSubmit.innerHTML = 'Wait...';
-      alert('booooom');
-      document.querySelector('button[type="button"]:nth-child(1)').style.display = 'none !important';
-    }
-  });
-
+   }
 });
