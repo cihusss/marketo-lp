@@ -202,11 +202,11 @@ MktoForms2.whenReady(function(form) {
         placeholder = this.setAttribute('placeholder', boo.innerHTML.split("</div>").pop());
         if(this.value == "") {
           boo.style.opacity = '0';
+          this.setAttribute('style', 'padding: 2px 6px 0 6px !important');
         }
         else {
           boo.style.opacity = '1';
         }
-        this.setAttribute('style', 'padding: 2px 6px 0 6px !important');
       });
   }
 
