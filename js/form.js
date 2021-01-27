@@ -192,7 +192,6 @@ MktoForms2.whenReady(function(form) {
   for (i = 0; i < inputs.length; i++) {
       input = document.getElementsByClassName('mktoField')[i];
       input.addEventListener('focusin', function() {
-        input.style.backgroundColor = "#cc0000";
         boo = this.previousSibling.previousSibling;
         boo.style.opacity = '1';
         placeholder = this.setAttribute('placeholder', '');
@@ -200,7 +199,6 @@ MktoForms2.whenReady(function(form) {
 
       });
       input.addEventListener('focusout', function() {
-        input.style.backgroundColor = "#ffffff";
         boo = this.previousSibling.previousSibling;
         placeholder = this.setAttribute('placeholder', boo.innerHTML.split("</div>").pop());
         if(this.value == "") {
@@ -234,5 +232,17 @@ MktoForms2.whenReady(function(form) {
       document.querySelector('button[type="button"]:nth-child(1)').style.display = 'none !important';
     }
   });
+
+  lala = document.querySelectorAll('.mktoField');
+  lala.forEach(element => {
+      element.addEventListener('focusin', function() {
+         console.log('focusIn');
+         element.style.padding = '20px';
+      });
+      element.addEventListener('focusout', function() {
+         console.log('focusOut');
+         element.style.padding = '0px';
+      });
+   });
 
 });
