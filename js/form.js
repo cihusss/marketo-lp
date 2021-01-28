@@ -233,6 +233,14 @@ MktoForms2.whenReady(function(form) {
     }
   });
 
+  legends = document.querySelectorAll('legend');
+  legends.forEach(element => {
+    let currText = element.innerHTML.replace('0', '');
+    steps = document.querySelectorAll('fieldset');
+    element.innerHTML = currText + ' of ' + steps.length;
+    element.setAttribute('style', 'display: block !important');
+  });
+
   lala = document.querySelectorAll('.mktoField');
   lala.forEach(element => {
       element.addEventListener('focusin', function() {
