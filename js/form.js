@@ -9,10 +9,10 @@ var userConfig = {
       }
    },
    requiredFields: [
-      // {
-      //    name: "Program_Of_Interest__c",
-      //    message: "This field is required."
-      // },
+      {
+         name: "Program_of_Interest__c",
+         message: "This field is required."
+      },
       {
          name: "FirstName",
          message: "This field is required."
