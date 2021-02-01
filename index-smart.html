@@ -25,7 +25,7 @@
     <meta class="mktoColor" id="color-h1a-form" mktoName="H1a / Form / Background Color" default="#f7f7f7">
     <meta class="mktoColor" id="color-h1a-form-font" mktoName="H1a / Form / Font Color" default="#333333">
     <meta class="mktoString" id="formshift-h1a" mktoName="H1a / Form Shift" default="0px">
-    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Full Width" default="true" true_value="100%" false_value="60%" false_value_name="100%" true_value_name="60%">
+    <meta class="mktoBoolean" id="toggle-h1a-full-width" mktoName="H1a / Wide" default="true" true_value="75%" false_value="60%" false_value_name="75%" true_value_name="60%">
     <meta class="mktoString" id="img-bg-h1a" mktoName="H1a / Background Image" default="">
     <meta class="mktoString" id="img-herologo-h1a" mktoName="Hero Logo / Background Image" default="">
     <meta class="mktoString" id="overlay-h1a" mktoName="H1a / Overlay" default="0%">
@@ -115,6 +115,7 @@
 
     <!-- H4q-thumb -->
     <meta class="mktoBoolean" id="toggle-h4q-thumb" mktoName="H4q Thumb / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoColor" id="h4q-thumb-background" mktoName="H4q Thumb / Display / Background Color" default="#f9f9f9">
 
     <!-- H4q -->
     <meta class="mktoBoolean" id="toggle-h4q" mktoName="H4q / Display" default="true" true_value="flex" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -161,7 +162,7 @@
         .two-cols p { margin: 0; }
 
         .quote-small .face-thumb {
-            height: auto !important; 
+            /*height: auto !important; */
             border-radius: 0 !important; 
         }
 
@@ -183,7 +184,7 @@
 
      #herologo {
         width: 160px;
-        margin: -90px 0 40px 0;
+        margin: -64px 0 12px 0;
         align-self: center;
         display: ${toggle-h1a-herologo};
     }
@@ -246,6 +247,7 @@
             background-position: center center;
             position: relative;
             max-height: 440px;
+            align-items: flex-start;
         }
 
         #h1a-headline {
@@ -277,8 +279,16 @@
             z-index: 12;
             /*align-items: flex-end;*/
             flex-direction: column;
-            padding: 32px;
+            padding: 0;
             max-width: 400px;
+        }
+
+        #h1a-form-inner {
+            padding: 32px;
+        }
+
+        #h1a-form-ad {
+            background: white;
         }
 
         #h1a-overlay {
@@ -327,7 +337,7 @@
         }
 
         #h1a-form-p, #h2a-form-p {
-            display: ${toggle-form-p};
+            /*display: ${toggle-form-p};*/
             font-size: 12px;
         }
 
@@ -470,6 +480,7 @@
 
         #h4q-thumb {
             display: ${toggle-h4q-thumb};
+            background-color: ${h4q-thumb-background};
         }
 
         #h4q-thumb p {
@@ -739,7 +750,7 @@
             h1 { font-size: 32px !important; }
             h3 { font-size: 24px !important; }
 
-            #h2a-2col .col-1-2:first-child {
+            #h2a-2col .col-1-3:first-child {
                 margin: 0 0 -24px 0;
             }
 
@@ -764,6 +775,12 @@
             #h1a-full-width {
                 width: 100%;
             }
+
+            #h1a-form-ad {
+                padding: 0 32px 32px 32px;
+            }
+
+            #h1a-form-ad h3 { font-size: 42px !important; }
 
             #h2a {
                 flex-direction: column;
@@ -847,6 +864,10 @@
                 height: 48px !important;
             }
 
+            .mktoForm legend {
+                margin: 0 0 -4px -8px !important;
+            }
+
         }
 
         @media (max-width: 1200px) {
@@ -903,7 +924,7 @@
             <!-- H1a -->
             
             <div id="h1a" class="row padding-hero-large">
-                <div class="width-lock">
+                <div class="width-lock flex-start">
                     <div id="h1a-full-width" class="col-3-5 no-col-padding">
                         <h1 id="h1a-headline" class="mktoText padding-type-right" mktoName="H1a / Headline">Supercharge Your Career Possibilities In Computer Information Systems</h1>
                         <h3 id="h1a-subhead" class="mktoText padding-type-right" mktoName="H1a / Subhead">100% Online Degrees.</h3>
@@ -911,11 +932,16 @@
                     </div>
                     <div id="h1a-form-wrap" class="col-2-5 col-flex">
                         <img id="herologo" src="${img-herologo-h1a}">
-                        <div id="h1a-form-h2" class="mktoText" mktoName="H1a / Form / Intro">Classes Start Soon</div>
-                        <div id="h1a-form-h1" class="mktoText" mktoName="H1a / Form / Headline">Get Started Today!</div>
-                        <div id="h1a-form-p" class="mktoText" mktoName="H1a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
-                        <form id="mktoForm_${form-h1a-id}"></form>
-                        <div id="h1a-form-disc" class="mktoText" mktoName="H1a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
+                        <div id="h1a-form-inner">
+                            <div id="h1a-form-h2" class="mktoText" mktoName="H1a / Form / Intro">Classes Start Soon</div>
+                            <div id="h1a-form-h1" class="mktoText" mktoName="H1a / Form / Headline">Get Started Today!</div>
+                            <div id="h1a-form-p" class="mktoText" mktoName="H1a / Form / Paragraph">No GRE/GMAT required. No Application Fee!</div>
+                            <form id="mktoForm_${form-h1a-id}"></form>
+                            <div id="h1a-form-disc" class="mktoText" mktoName="H1a / Form / Disclaimer">By completing this form and clicking the button below, I consent to receiving calls, text messages and/or emails from BISK, its client institutions, and their representatives regarding educational services and programs. I understand calls and texts may be directed to the number I provide using automatic dialing technology. I understand that this consent is not required to purchase goods or services.</div>
+                        </div>
+                        <div id="h1a-form-ad" class="mktoText" mktoName="H1a / Form / Ad">
+                            <h5>Lorem ipsum dolor sit amet</h5>
+                        </div>
                     </div>
                 </div>
                 <div id="h1a-overlay"></div>
@@ -935,20 +961,28 @@
             <div id="h2a-2col" class="row padding-hero-medium">
                 <div class="width-lock change-direction">
                     <div class="col-3-5 no-col-padding padding-type-right">
-                        <h4 id="h2a-2col-headline" class="mktoText" mktoName="H2a / 2-col / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
+                        <h4 id="h2a-2col-headline" class="mktoText" mktoName="H2a / Col / Headline">This is a headline for the landing page. Learn with us, 100% online.</h4>
                     </div>
                     <div class="col-2-5"></div>
                     <!-- <div class="col-1-1 no-col-padding two-cols">
                         <p id="h2a-2col-paragraph" class="mktoText" mktoName="H2a / 2-col / Paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
                     </div> -->
                     <div class="width-lock flex-start">
-                    <div class="col-1-2 no-col-padding padding-type-right-small">
-                        <p id="h2a-col1" class="mktoText" mktoName="H2a / Column 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                        <div class="col-3-5 no-col-padding padding-type-right-small">
+                            <p id="h2a-col-intro" class="mktoText" mktoName="H2a / Col / Intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                        </div>
+                        <div class="col-2-5 no-col-padding ppadding-type-left-small"></div>
                     </div>
-                    <div class="col-1-2 no-col-padding padding-type-left-small">
-                        <p id="h2a-col2" class="mktoText" mktoName="H2a / Column 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                    <div class="width-lock flex-start">
+                        <div class="col-1-3 no-col-padding padding-type-right-small">
+                            <p id="h2a-col1" class="mktoText" mktoName="H2a / Col / Column 1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                        </div>
+                        <div class="col-1-3 no-col-padding padding-type-right-small">
+                            <p id="h2a-col2" class="mktoText" mktoName="H2a / Col / Column 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing elit pellentesque habitant morbi tristique senectus. Scelerisque purus semper eget duis. Vitae justo eget magna fermentum.</p>
+                        </div>
+                        <div class="col-1-3 no-col-padding padding-type-right-small">
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 
