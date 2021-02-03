@@ -34,7 +34,7 @@ var userConfig = {
          message: "This field is required."
       },
       {
-         name: "Country_of_Citizenship__c",
+         name: "CountryCode",
          message: "This field is required."
       }
    ]
